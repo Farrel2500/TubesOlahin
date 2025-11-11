@@ -1,0 +1,199 @@
+/* Variabel Warna Khusus Aplikasi */
+:root {
+    --color-primary-green: #4CAF50;
+    --color-soft-yellow: #FFFAA0; /* Warna latar belakang header nav */
+    --color-background-grey: #f0f0f5; /* Latar belakang utama aplikasi */
+    --color-card-white: #fff;
+    --color-text-dark: #333;
+    --color-text-light: #666;
+    --color-accent-orange: #FF7043; /* Warna tombol Quick Action 1 */
+    --color-accent-grey: #e8e8e8; /* Warna tombol Quick Action 2 */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--color-background-grey);
+}
+
+.app-interface-container {
+    width: 100%;;
+    margin: 0 auto;
+    background-color: var(--color-card-white); /* Background di dalam layar laptop */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* --- App Header (Navigation Bar Aplikasi) --- */
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFF09DFF ; /* Latar belakang kuning muda */
+    padding: 15px 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-logo {
+    font-size: 1.2em;
+    font-weight: 900;
+    margin-right: 30px;
+}
+
+.header-logo .in-green {
+    color: var(--color-primary-green);
+}
+
+.app-nav-links {
+    flex-grow: 1;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.app-nav-links a {
+    color: var(--color-text-light);
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.app-nav-links a:hover {
+    color: #4CAF50;
+}
+
+.app-nav-links .active-link {
+    background-color: var(--color-white);
+    color: #4CAF50;
+    font-weight: 700;
+}
+
+/* Tombol dan Avatar di Kanan Header */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-primary-green-small {
+    background-color: var(--color-primary-green);
+    color: var(--color-white);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.user-profile .avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--color-primary-green);
+}
+
+/* --- Main Content: Budgeting Page --- */
+.budgeting-page-content {
+    padding: 30px;
+}
+
+.budgeting-page-content h1 {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin-bottom: 30px;
+}
+
+.transactions-section,
+.quick-actions-section {
+    margin-bottom: 40px;
+}
+
+.transactions-section h2,
+.quick-actions-section h2 {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    margin-bottom: 20px;
+}
+
+/* --- Recent Transactions Table --- */
+.transaction-table-wrapper {
+    background-color: var(--color-white);
+    border-radius: 8px;
+    padding: 10px 0;
+    border: 1px solid #eee;
+}
+
+.transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95em;
+}
+
+.transaction-table th,
+.transaction-table td {
+    padding: 12px 20px;
+}
+
+.transaction-table th {
+    font-weight: 600;
+    color: var(--color-text-light);
+    border-bottom: 1px solid #eee;
+}
+
+.transaction-table tbody tr:not(:last-child) {
+    border-bottom: 1px solid #f9f9f9;
+}
+
+.transaction-table tbody td {
+    color: var(--color-text-dark);
+}
+
+.transaction-table tbody tr:hover {
+    background-color: #fcfcfc;
+}
+
+.amount-col {
+    text-align: right;
+    font-weight: 600;
+    color: var(--color-text-dark);
+}
+
+/* --- Quick Actions Buttons --- */
+.action-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.2s;
+}
+
+.btn-action-primary {
+    background-color: var(--color-accent-orange);
+    color: var(--color-white);
+}
+
+.btn-action-secondary {
+    background-color: var(--color-accent-grey);
+    color: var(--color-text-dark);
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
