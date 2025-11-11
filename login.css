@@ -1,0 +1,215 @@
+/* Variabel Warna */
+:root {
+    --color-orange-primary: #FF7043;
+    --color-white: #fff;
+    --color-text-dark: #333;
+    --color-text-light: #666;
+    --color-border-grey: #e0e0e0;
+    --color-page-bg: #f7f7f7; /* Latar belakang halaman (di luar kotak login) */
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--color-page-bg);
+}
+
+/* --- Layout Halaman Login Penuh --- */
+
+.login-page-container {
+    /* Membuat container menempati seluruh viewport */ 
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Memberikan latar belakang gambar blur seperti di desain */
+    background-image: url('login.jpg'); 
+    background-size: cover;
+    background-position: center;
+    /* Untuk membuat gambar terlihat buram */
+    position: relative; 
+}
+
+/* Overlay/Container Tengah untuk Efek Blur */
+.login-page-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('login.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); /* Efek blur pada gambar latar belakang */
+    z-index: 1;
+}
+
+.login-box-content {
+    background-color: var(--color-white);
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 700px; /* Ukuran box login */
+    position: relative;
+    z-index: 2; /* Di atas lapisan blur */
+    overflow: hidden;
+}
+
+.login-container {
+    display: flex;
+    width: 100%;
+    min-height: 480px; /* Tinggi minimal box */
+}
+
+/* Kolom Kiri: Logo */
+.login-logo-side {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: var(--color-white); /* Background solid putih */
+}
+
+.logo-image {
+    max-width: 150px; /* Ukuran logo disesuaikan */
+    height: auto;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+/* Kolom Kanan: Form */
+.login-form-side {
+    flex: 1;
+    padding: 40px 50px;
+    text-align: center;
+    border-left: 1px solid var(--color-border-grey);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-title {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.login-subtitle {
+    font-size: 1.0em;
+    color: var(--color-text-light);
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* Form Elements */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.input-field {
+    padding: 14px;
+    border: 1px solid var(--color-border-grey);
+    border-radius: 8px;
+    font-size: 1.0em;
+    color: var(--color-text-dark);
+}
+
+.input-field::placeholder {
+    color: #b0b0b0;
+}
+
+/* Tombol Continue (Orange) */
+.btn {
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: none;
+    border-radius: 8px;
+}
+
+.btn-orange-continue {
+    background-color: var(--color-orange-primary);
+    color: var(--color-white);
+    padding: 15px;
+    font-size: 1.0em;
+    margin-top: 5px;
+}
+
+.btn-orange-continue:hover {
+    background-color: #e65100;
+}
+
+.privacy-text {
+    font-size: 0.75em;
+    color: var(--color-text-light);
+    margin-bottom: 25px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* Separator OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--color-border-grey);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+.separator span {
+    color: var(--color-text-light);
+    font-size: 0.85em;
+}
+
+/* Tombol OAuth */
+.btn-oauth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid var(--color-border-grey);
+    background-color: var(--color-white);
+    color: var(--color-text-dark);
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.btn-oauth:hover {
+    background-color: #f8f8f8;
+}
+
+.icon-placeholder {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    font-weight: 900;
+    font-size: 1.1em;
+}

@@ -1,0 +1,583 @@
+/* Global Reset and Typography */
+:root {
+    /* Warna yang di-ekstrak dari gambar */
+    --color-primary-green: #4CAF50; 
+    --color-bg-orange: #ff7519;
+    --color-darker-green: #388E3C;
+    --color-secondary-yellow: #FFD76D; 
+    --color-hero-bg: #D4A373; /* Warna dasar kecoklatan/emas untuk Hero */
+    --color-text-dark: #333;
+    --color-text-light: #666;
+    --color-white: #fff;
+    --color-grey-light: #f4f4f4;
+    --font-family: 'Arial', sans-serif; 
+    --max-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    background-color: var(--color-white);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text-dark);
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+.container {
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    /* Reset padding di container karena sudah diatur di setiap section/navbar */
+    padding: 0; 
+}
+
+/* --- Buttons and General Components --- */
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s, opacity 0.3s;
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid transparent;
+    white-space: nowrap; /* Mencegah tombol pecah baris */
+}
+
+/* Navbar Buttons */
+.auth-buttons .btn {
+    margin-left: 10px;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    border-radius: 20px;
+}
+
+.auth-buttons .btn-primary {
+    background-color: var(--color-primary-green);
+    color: var(--color-white);
+    border-color: var(--color-primary-green);
+}
+
+.auth-buttons .btn-secondary {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--color-primary-green); /* 'Masuk' berwarna hijau */
+}
+
+/* Hero Section Buttons */
+.hero-buttons .btn {
+    margin: 0 10px;
+    font-size: 1.0em;
+    padding: 12px 30px;
+    border-radius: 25px;
+}
+
+.btn-outline {
+    background-color: var(--color-white);
+    color: var(--color-text-dark);
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary-hero {
+    background-color: var(--color-darker-green); 
+    color: var(--color-white);
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Recipes Section Button */
+.btn-primary-small {
+    padding: 8px 15px;
+    background-color: var(--color-primary-green);
+    color: var(--color-white);
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+
+/* --- 1. Header/Navigation Bar --- */
+
+.navbar {
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-grey-light);
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 900;
+}
+
+.logo .in-green {
+    color: var(--color-primary-green);
+}
+
+.nav-links a {
+    margin-left: 25px;
+    font-size: 0.95em;
+    color: var(--color-text-light);
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: var(--color-primary-green);
+}
+
+
+/* --- 2. Hero Section --- */
+
+.hero-section {
+    position: relative;
+    padding-top: 80px; 
+    height: 700px;
+    background-color: var(--color-hero-bg); 
+    /* Placeholder untuk gambar latar belakang makanan yang buram */
+    background-image: url('restoran.jpg'); 
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(49, 46, 44, 0.6); /* Overlay warna kecoklatan/emas */
+    background-position: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--color-white);
+}
+
+/* Overlay untuk menggelapkan/memberi tone warna pada gambar */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), var(--color-hero-bg));
+    opacity: 0.85; 
+    z-index: 1;
+}
+
+.hero-content {
+    z-index: 2;
+    padding: 40px 0;
+}
+
+.hero-content h1 {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+    font-weight: 900;
+    color: var(--color-white);
+}
+
+.hero-content p {
+    font-size: 1.1em;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* --- 3. Why Olah.in Section --- */
+
+.why-olah-in {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--color-grey-light);
+}
+
+.why-olah-in h2 {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: var(--color-text-dark);
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.feature-card {
+    flex: 1;
+    padding: 40px 20px;
+    border-radius: 10px;
+    background-color: var(--color-white);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    /* Border top seperti yang terlihat di gambar */
+    border-top: 5px solid var(--color-white); 
+    /* Agar card terlihat melayang */
+    transform: translateY(0);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    font-size: 1.2em;
+    margin: 15px 0 10px;
+    font-weight: 700;
+}
+
+.card-icon {
+    font-size: 1.5em; /* Ukuran Ikon */
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: var(--color-primary-green);
+    color: var(--color-white);
+    font-weight: bold;
+}
+
+.feature-card p {
+    font-size: 0.95em;
+    color: var(--color-text-light);
+}
+
+/* --- 4. Popular Recipes Section --- */
+
+.popular-recipes {
+    background-color: var(--color-secondary-yellow); /* Latar belakang kuning */
+    padding: 60px 0 80px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.section-header .subtitle-text {
+    font-size: 1.0em;
+    color: var(--color-text-dark);
+    font-weight: 500;
+}
+
+.recipe-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.recipe-card {
+    flex: 1;
+    background-color: var(--color-white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+}
+
+.recipe-image-placeholder {
+    height: 200px;
+    background-color: #e0e0e0;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Placeholder styles for images (replace with real images in production) */
+.recipe-image-placeholder[style*='pasta.jpg'] { background-image: url('https://picsum.photos/400/200?random=1'); }
+.recipe-image-placeholder[style*='nasigoreng.jpg'] { background-image: url('https://picsum.photos/400/200?random=2'); }
+.recipe-image-placeholder[style*='supkrim.jpg'] { background-image: url('https://picsum.photos/400/200?random=3'); }
+
+
+.recipe-card h4 {
+    padding: 15px 20px 5px;
+    font-size: 1.1em;
+}
+
+.recipe-stats {
+    display: flex;
+    gap: 15px;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    font-size: 0.85em;
+    color: var(--color-text-light);
+    font-weight: 600;
+}
+.recipe-stats span {
+    display: flex;
+    align-items: center;
+}
+
+.recipe-description {
+    padding: 0 20px 20px;
+    font-size: 0.9em;
+    color: var(--color-text-light);
+}
+/* Pastikan variabel warna berikut sudah ada di bagian :root */
+/* :root {
+    --color-primary-green: #4CAF50;
+    --color-grey-bg: #f5f5f7;  // Perkiraan warna abu-abu muda
+    --color-secondary-yellow: #FFD76D; // Perkiraan warna kuning testimonial
+    --color-white: #fff;
+    --color-text-dark: #333;
+    --color-text-light: #666;
+} 
+*/
+
+/* --- 3. Section: Dashboard Feature (Semua dalam Satu Dashboard) --- */
+
+.dashboard-feature {
+    background-color: var(--color-grey-bg, #f5f5f7); /* Menggunakan abu-abu muda */
+    padding: 100px 0;
+}
+
+.dashboard-feature .feature-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.dashboard-feature .text-content {
+    flex: 1;
+    max-width: 45%;
+}
+
+.dashboard-feature .text-content h2 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.dashboard-feature .text-content p {
+    font-size: 1.1em;
+    color: var(--color-text-light);
+}
+
+.dashboard-feature .image-content {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.laptop-placeholder {
+    width: 100%;
+    max-width: 450px;
+    height: 300px;
+    background-color: var(--color-white);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
+    color: var(--color-text-light);
+    border: 1px solid #eee;
+    /* Menambahkan sedikit margin untuk menyesuaikan posisi gambar di desain */
+    margin-right: 50px; 
+}
+
+
+/* --- 4. Section: Testimonials (Apa kata mereka tentang Olah.in?) --- */
+
+.testimonials {
+    background-color: var(--color-secondary-yellow, #FFD76D); 
+    padding: 80px 0 60px;
+    text-align: center;
+}
+
+.testimonials .section-title-wrapper {
+    margin-bottom: 50px;
+}
+
+.testimonials h2 {
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--color-text-dark);
+}
+
+.testimonial-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.testimonial-card {
+    flex: 1;
+    max-width: 350px;
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    min-height: 250px; /* Agar semua kartu memiliki tinggi yang sama */
+}
+
+.testimonial-card .rating {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.testimonial-card .quote {
+    font-style: italic;
+    font-size: 1.0em;
+    color: var(--color-text-dark);
+    line-height: 1.5;
+    margin-bottom: 20px;
+    display: block; /* Agar blockquote menyesuaikan tinggi card */
+}
+
+.reviewer {
+    display: flex;
+    align-items: center;
+    margin-top: auto; /* Mendorong reviewer ke bawah card */
+}
+
+.reviewer-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin-right: 10px;
+    background-size: cover;
+    background-position: center;
+}
+
+.reviewer-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.reviewer-info .name {
+    font-weight: bold;
+    color: var(--color-text-dark);
+    font-size: 0.95em;
+}
+
+.reviewer-info .title {
+    font-size: 0.8em;
+    color: var(--color-text-light);
+}
+
+.pagination-dots {
+    text-align: center;
+}
+
+.dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: var(--color-primary-green);
+    width: 15px;
+    border-radius: 4px;
+}
+
+
+/* --- 5. Footer --- */
+
+.main-footer {
+    background-color: var(--color-white);
+    color: var(--color-text-light);
+    padding-top: 60px;
+    border-top: 1px solid #eee;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+
+.footer-logo {
+    font-size: 1.5em;
+    font-weight: 900;
+    color: var(--color-text-dark);
+    flex-basis: 25%; /* Memberikan ruang lebih untuk logo */
+}
+
+.footer-logo .in-green {
+    color: var(--color-primary-green);
+}
+
+.footer-links-group {
+    flex-basis: 20%;
+}
+
+.footer-links-group h3 {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--color-text-dark);
+    margin-bottom: 15px;
+}
+
+.footer-links-group ul {
+    list-style: none;
+}
+
+.footer-links-group ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links-group ul li a {
+    color: var(--color-text-light);
+    font-size: 0.95em;
+    transition: color 0.2s;
+}
+
+.footer-links-group ul li a:hover {
+    color: var(--color-primary-green);
+}
+
+.footer-bottom-bar {
+    border-top: 1px solid #eee;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.85em;
+    color: var(--color-text-light);
+}
