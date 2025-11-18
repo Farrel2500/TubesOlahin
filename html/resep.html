@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Koleksi Resep Anda - Olah.in</title>
+    <link rel="stylesheet" href="/css/resep.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <img
+              src="/gambar/olahin.png"
+              alt="Olah.in Logo"
+              class="logo-image"
+              height="70"
+            />
+          </div>
+          <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="/html/resep.html">Resep Cerdas</a></li>
+            <li><a href="#">Anggaran</a></li>
+            <li><a href="#">Kelola Bahan</a></li>
+            <li><a href="#" class="active">Koleksi Resep</a></li>
+          </ul>
+          <div class="header-actions">
+            <button class="search-btn">Cari resep</button>
+            <img
+              src="https://via.placeholder.com/40"
+              alt="Profil Pengguna"
+              class="profile-icon"
+            />
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-container">
+          <div class="hero-text">
+            <h1>Koleksi Resep <span class="highlight">Anda</span></h1>
+            <p>
+              Atur dan temukan kembali resep favorit Anda. Dari yang sudah
+              dicoba hingga yang spesial, semuanya ada disini!
+            </p>
+            <button class="add-recipe-btn">+ Tambah Resep Baru</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-area">
+        <div class="container">
+          <div class="content-header">
+            <h2>Resep Dicoba</h2>
+            <a href="#" class="see-all">Lihat Semua</a>
+          </div>
+
+          <div class="recipe-grid">
+            <div class="recipe-card">
+              <div class="card-image">
+                <img
+                  src="https://via.placeholder.com/300x225/cccccc/888888?text=Gado-gado"
+                  alt="Gado-gado Nusantara"
+                />
+                <button class="like-btn">♡</button>
+              </div>
+              <div class="card-content">
+                <h3>Gado-gado Nusantara</h3>
+                <p>
+                  Dengan saus kacang istimewa yang kental dan perpaduan bumbu
+                  rempah...
+                </p>
+                <div class="tags">
+                  <span class="tag tag-veg">Vegetarian</span>
+                  <span class="tag tag-time">30 Menit</span>
+                </div>
+                <a href="#" class="view-recipe-btn">Lihat Resep</a>
+              </div>
+            </div>
+
+            <div class="recipe-card">
+              <div class="card-image">
+                <img
+                  src="https://via.placeholder.com/300x225/cccccc/888888?text=Nasi+Goreng"
+                  alt="Nasi Goreng Kampung"
+                />
+                <button class="like-btn">♡</button>
+              </div>
+              <div class="card-content">
+                <h3>Nasi Goreng Kampung</h3>
+                <p>
+                  Resep nasi goreng kilat dengan bumbu rempah sederhana, favorit
+                  keluarga.
+                </p>
+                <div class="tags">
+                  <span class="tag tag-praktis">Praktis</span>
+                  <span class="tag tag-time">20 Menit</span>
+                </div>
+                <a href="#" class="view-recipe-btn">Lihat Resep</a>
+              </div>
+            </div>
+
+            <div class="recipe-card">
+              <div class="card-image">
+                <img
+                  src="https://via.placeholder.com/300x225/cccccc/888888?text=Sate+Ayam"
+                  alt="Sate Ayam Madura"
+                />
+                <button class="like-btn">♡</button>
+              </div>
+              <div class="card-content">
+                <h3>Sate Ayam Madura</h3>
+                <p>
+                  Sate ayam bumbu kacang khas madura dengan bumbu bakaran
+                  otentik.
+                </p>
+                <div class="tags">
+                  <span class="tag tag-tradisional">Tradisional</span>
+                  <span class="tag tag-time">45 Menit</span>
+                </div>
+                <a href="#" class="view-recipe-btn">Lihat Resep</a>
+              </div>
+            </div>
+
+            <div class="recipe-card">
+              <div class="card-image">
+                <img
+                  src="https://via.placeholder.com/300x225/cccccc/888888?text=Sop+Buntut"
+                  alt="Sop Buntut Spesial"
+                />
+                <button class="like-btn">♡</button>
+              </div>
+              <div class="card-content">
+                <h3>Sop Buntut Spesial</h3>
+                <p>
+                  Sup buntut sapi dengan kuah bening rempah dan potongan sayuran
+                  segar.
+                </p>
+                <div class="tags">
+                  <span class="tag tag-tradisional">Tradisional</span>
+                  <span class="tag tag-time">120 Menit</span>
+                </div>
+                <a href="#" class="view-recipe-btn">Lihat Resep</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="content-area">
+        <div class="container">
+          <div class="content-header">
+            <h2 class="title-favorit">Resep Favorit</h2>
+            <a href="#" class="see-all">Lihat Semua</a>
+          </div>
+          <p class="section-subtitle">
+            Resep yang sangat Anda sukai dan ingin selalu mudah diakses. Permata
+            kuliner Anda!
+          </p>
+
+          <div class="recipe-grid">
+            <div class="recipe-card">
+              <div class="card-image">
+                <img
+                  src="https://via.placeholder.com/300x225/cccccc/888888?text=Rendang"
+                  alt="Rendang Daging Sapi"
+                />
+                <button class="like-btn">♡</button>
+              </div>
+              <div class="card-content">
+                <h3>Rendang Daging Sapi</h3>
+                <p>
+                  Rendang asli Padang yang dimasak perlahan hingga bumbu meresap
+                  sempurna.
+                </p>
+                <div class="tags">
+                  <span class="tag tag-tradisional">Pedas</span>
+                  <span class="tag tag-tradisional">Rendang</span>
+                </div>
+                <a href="#" class="view-recipe-btn">Lihat Resep</a>
+              </div>
+            </div>
+
+            <div class="recipe-card">
+              <div class="card-image">
+                <img
+                  src="https://via.placeholder.com/300x225/cccccc/888888?text=Pempek"
+                  alt="Pempek Palembang"
+                />
+                <button class="like-btn">♡</button>
+              </div>
+              <div class="card-content">
+                <h3>Pempek Palembang</h3>
+                <p>
+                  Pempek lembut dengan cuko sedap, menu camilan khas Sumatera
+                  Selatan.
+                </p>
+                <div class="tags">
+                  <span class="tag tag-time">Ikan</span>
+                  <span class="tag tag-tradisional">Goreng</span>
+                </div>
+                <a href="#" class="view-recipe-btn">Lihat Resep</a>
+              </div>
+            </div>
+
+            <div class="recipe-card">
+              <div class="card-image">
+                <img
+                  src="https://via.placeholder.com/300x225/cccccc/888888?text=Martabak"
+                  alt="Martabak Manis Cokelat Keju"
+                />
+                <button class="like-btn">♡</button>
+              </div>
+              <div class="card-content">
+                <h3>Martabak Manis Cokelat Keju</h3>
+                <p>
+                  Martabak tebal dan lembut dengan topping cokelat, keju, dan
+                  susu kental manis.
+                </p>
+                <div class="tags">
+                  <span class="tag tag-tradisional">Manis</span>
+                  <span class="tag tag-tradisional">Cemilan</span>
+                </div>
+                <a href="#" class="view-recipe-btn">Lihat Resep</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-area">
+        <div class="container">
+          <div class="content-header">
+            <h2 class="title-spesial">Resep Spesial</h2>
+            <a href="#" class="see-all">Lihat Semua</a>
+          </div>
+          <p class="section-subtitle">
+            Resep unik dan sentimental seperti resep warisan keluarga atau
+            masakan khusus perayaan.
+          </p>
+
+          <div class="recipe-grid">
+            <div class="recipe-card">
+              <div class="card-image">
+                <img
+                  src="https://via.placeholder.com/300x225/cccccc/888888?text=Sop+Ayam"
+                  alt="Sop Ayam Warisan Nenek"
+                />
+                <button class="like-btn">♡</button>
+              </div>
+              <div class="card-content">
+                <h3>Sop Ayam Warisan Nenek</h3>
+                <p>
+                  Resep sop ayam kampung dengan kuah kaldu bening khas resep
+                  nenek.
+                </p>
+                <div class="tags">
+                  <span class="tag tag-praktis">Keluarga</span>
+                  <span class="tag tag-praktis">Warisan</span>
+                </div>
+                <a href="#" class="view-recipe-btn">Lihat Resep</a>
+              </div>
+            </div>
+
+            <div class="recipe-card">
+              <div class="card-image">
+                <img
+                  src="https://via.placeholder.com/300x225/cccccc/888888?text=Kue+Lapis"
+                  alt="Kue Lapis Pandan"
+                />
+                <button class="like-btn">♡</button>
+              </div>
+              <div class="card-content">
+                <h3>Kue Lapis Pandan</h3>
+                <p>
+                  Kue lapis dengan aroma pandan yang khas, manis, dan lembut.
+                </p>
+                <div class="tags">
+                  <span class="tag tag-tradisional">Manisan</span>
+                  <span class="tag tag-tradisional">Tradisional</span>
+                </div>
+                <a href="#" class="view-recipe-btn">Lihat Resep</a>
+              </div>
+            </div>
+
+            <div class="recipe-card">
+              <div class="card-image">
+                <img
+                  src="https://via.placeholder.com/300x225/cccccc/888888?text=Sambal"
+                  alt="Sambal Terasi Istimewa"
+                />
+                <button class="like-btn">♡</button>
+              </div>
+              <div class="card-content">
+                <h3>Sambal Terasi Istimewa</h3>
+                <p>
+                  Sambal terasi yang selalu membuat masakan jadi lebih nikmat,
+                  resep rahasia keluarga.
+                </p>
+                <div class="tags">
+                  <span class="tag tag-tradisional">Pelengkap</span>
+                  <span class="tag tag-tradisional">Pedas</span>
+                </div>
+                <a href="#" class="view-recipe-btn">Lihat Resep</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <button class="fab">⚡️ Visily</button>
+  </body>
+</html>

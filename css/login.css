@@ -44,10 +44,10 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('login.jpg');
+    background-image: url('/gambar/login.jpg');
     background-size: cover;
     background-position: center;
-    filter: blur(8px); /* Efek blur pada gambar latar belakang */
+    filter: blur(2px); /* Efek blur pada gambar latar belakang */
     z-index: 1;
 }
 
