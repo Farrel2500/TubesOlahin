@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Resep - Olah.in</title>
+    <link rel="stylesheet" href="/CSS/MainRecipes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+     <nav class="navbar-container">
+        <div class="logo">
+            <img src="/Images/LogoOlahin.png" class="logo-nav"> 
+        </div>
+            
+            <nav class="nav-links">
+                <a href="Dashboard.html">Dashboard</a>
+                <a href="MainRecipes.html" class="active">Resep Cerdas</a>
+                <a href="#">Anggaran</a>
+                <a href="#">Kelola Bahan</a>
+            </nav>
+            
+            <div class="nav-right">
+                <input type="search" placeholder="Cari Resep" class="search-bar">
+                <img src="/Images/Pfp.jpeg" alt="Foto Profil" class="profile-pic">
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="recipe-controls">
+            <h1>Semua Resep</h1>
+            <div class="filter-controls">
+                <div class="filter-group">
+                    <label for="kategori">Kategori</label>
+                    <select id="kategori" class="dropdown-box">
+                        <option value="semua">Semua Kategori</option>
+                        <option value="indonesia">Masakan Indonesia</option>
+                        <option value="barat">Masakan Barat</option>
+                        <option value="jepang">Masakan Jepang</option>
+                        <option value="italia">Masakan Italia</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="urutkan">Urutkan Berdasarkan</label>
+                    <select id="urutkan" class="dropdown-box">
+                        <option value="popularitas">Popularitas (Jumlah Like)</option>
+                        <option value="negara">Negara</option>
+                        <option value="level">Level Kesulitan</option>
+                        <option value="bahan">Bahan</option>
+                    </select>
+                </div>
+                
+                <button class="btn btn-primary">
+                    <span class="icon">+</span> Tambah Resep Baru
+                </button>
+            </div>
+        </section>
+
+        <section class="recipe-section">
+            <h2>Resep Unggulan</h2>
+            <div class="recipe-grid grid-3">
+                
+                <div class="recipe-card">
+                    <img src="https://plus.unsplash.com/premium_photo-1694141252774-c937d97641da?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bmFzaSUyMGdvcmVuZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600" alt="Nasi Goreng">
+                    <div class="card-content">
+                        <h3>Nasi Goreng</h3>
+                        <p>Resep nasi goreng kesukaan semua orang yang mudah dibuat, rasanya enak, dan yang pasti kenyang!</p>
+                        <span class="tag">Masakan Indonesia</span>
+                        <a href="#" class="btn btn-secondary">Lihat Resep</a>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <img src="https://plus.unsplash.com/premium_photo-1669631647057-3403888e87da?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDIwfHx8ZW58MHx8fHx8&auto=format&fit=crop&q=60&w=600" alt="Sup Krim Ayam Jamur">
+                    <div class="card-content">
+                        <h3>Sup Krim Ayam Jamur</h3>
+                        <p>Sup krim kental dan menghangatkan, cocok untuk musim hujan atau saat Anda butuh kehangatan.</p>
+                        <span class="tag">Masakan Barat</span>
+                        <a href="#" class="btn btn-secondary">Lihat Resep</a>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <img src="https://i.pinimg.com/736x/11/5f/39/115f397b498ea34177e19ee9b9c7b1f3.jpg" alt="Salad Buah Segar">
+                    <div class="card-content">
+                        <h3>Salad Buah Segar</h3>
+                        <p>Salad buah pilihan terbaik penuh vitamin, sempurna sebagai hidangan penutup ringan.</p>
+                        <span class="tag">Makanan Sehat</span>
+                        <a href="#" class="btn btn-secondary">Lihat Resep</a>
+                    </div>
+                </div>
+                
+                </div>
+        </section>
+
+        <section class="recipe-section">
+            <h2>Re-cook yuk!</h2>
+            <div class="recipe-grid grid-2">
+                
+                <div class="history-card">
+                    <img src="/Images/MenuKos.jpg" alt="Menu tengah bulan">
+                    <div class="card-content">
+                        <h3>Menu tengah bulan untuk anak kos</h3>
+                        <p>Mau makan enak tapi uang mulai menipis? Masak yang ada aja!</p>
+                        <span class="date">Dimasak pada tanggal: 30 April 2025</span>
+                        <a href="#" class="btn btn-riwayat">Lihat Riwayat</a>
+                    </div>
+                </div>
+
+                <div class="history-card">
+                    <img src="/Images/Dessert.jpg" alt="Dessert simpel">
+                    <div class="card-content">
+                        <h3>Dessert simpel untuk makan malam</h3>
+                        <p>Kreasi hidangan penutup yang simpel dan sehat sebelum tidur.</p>
+                        <span class="date">Dimasak pada tanggal: 15 Mei 2025</span>
+                        <a href="#" class="btn btn-riwayat">Lihat Riwayat</a>
+                    </div>
+                </div>
+            </div> 
+        </section>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,329 @@
+/* PENGATURAN GLOBAL & WARNA  */
+:root {
+    --button-primary: #4CAF50;
+    --button-primary-hover: #45a049; 
+    --button-secondary: #F0F0F0;
+    --button-secondary-hover: #E0E0E0;
+    --card-bg: #FFFFFF;
+    --text-light: #757575;
+  
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+    margin: 0;
+    background-color: #f5f5f5;
+
+
+}
+
+.container {
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+    font-weight: 600;
+}
+
+h2 {
+    margin-bottom: 24px;
+    font-size: 1.75rem;
+}
+
+p {
+    color: #757575;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* ===== HEADER / NAVBAR ===== */
+.navbar {
+    background-color: #FFF09DFF;
+    padding: 16px 24px;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px; 
+    width: auto;
+}
+
+.nav-links {
+    color: #FF6B35;
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding-bottom: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FF6B35;
+}
+
+.nav-links a.active {
+    color: #FF6B35;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.search-bar {
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    min-width: 200px;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* KONTROL RESEP (Filter & Tombol) */
+.recipe-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.filter-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-group label {
+    font-size: 15px;
+    color: var(--text-light);
+    margin-bottom: 4px;
+}
+
+/* Ini adalah style untuk "drop box combo" (dropdown) */
+.dropdown-box {
+    padding: 8px 12px;
+    border: 1px solid ;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+/* TOMBOL STYLING & HOVER EFFECT  */
+.btn {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex; 
+    align-items: center;
+    margin-top: 24px;
+    gap: 30px;
+    
+    /* Membuat semua perubahan (warna, bayangan, ukuran) menjadi mulus */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Tombol Utama (Hijau) */
+.btn-primary {
+    display: flex;
+    justify-content: center;
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Tombol Sekunder */
+.btn-secondary {
+    background-color: #4CAF50; 
+    color: white;
+    border: 1px solid #483f1b; 
+    width: 100%; 
+    justify-content: center; 
+    margin-top: 16px;
+    padding: 8px;
+}
+
+.btn-riwayat {
+    background-color: white; 
+    color: #333;
+    border: 1px solid #483f1b; 
+    width: 100%; 
+    justify-content: center; 
+    margin-top: 16px;
+    padding: 8px;
+}
+
+/* bikin hover */
+.btn:hover {
+    /* Sedikit mengangkat tombol dan memberi bayangan */
+    transform: translateY(-3px); /* Menggerakkan tombol ke atas sedikit */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+    background-color: #2d8031 ; 
+    
+}
+
+.btn-secondary:hover {
+    background-color: #3a923f; 
+    border-color: #333;
+}
+
+.btn-riwayat:hover {
+    background-color: #60d866;
+    border-color: #333;
+}
+
+.btn:active {
+    /* Efek saat tombol ditekan */
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* bagian RESEP & RIWAYAT  */
+.recipe-section {
+    margin-bottom: 48px;
+}
+
+.recipe-grid {
+    display: grid;
+    gap: 24px;
+}
+
+/* Grid 3 kolom untuk Resep Unggulan */
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Grid 2 kolom untuk Re-cook */
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Styling untuk Kartu Resep & Riwayat */
+.recipe-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.history-card {
+    background-color: #ffe1ab;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    overflow: hidden; /* biar gambar ngga keluar dari radius */
+    display: flex;
+    flex-direction: column;
+}
+
+.recipe-card img,
+.history-card img {
+    width: 100%;
+    height: 200px; /* Tinggi gambar tetap */
+    object-fit: cover; /* biar gambar terisi penuh  */
+}
+
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content a{
+    padding-left: 0px;
+    padding-right: 2px;
+    justify-content: center;
+}
+
+.card-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 16px;
+    flex-grow: 1; /* Mendorong tag/tanggal ke bawah */
+}
+
+.tag {
+    background-color: #E0F2FE; /* Biru muda */
+    color: #0284C7; /* Biru tua */
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    align-self: flex-start; /* cuma makan ruang seperlunya */
+}
+
+.date {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+/* bikin responsive (Tablet/HP) */
+@media (max-width: 992px) {
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr); /* Jadi 2 kolom */
+    }
+    .nav-links {
+        display: none; /* sembunyiin link di layar kecil (butuh JS untuk menu burger) */
+    }
+}
+
+@media (max-width: 768px) {
+    .recipe-controls {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    
+    .filter-controls {
+        flex-wrap: wrap; /* Filter bakal turun ke bawah kalo ngga muat */
+        width: 100%;
+    }
+
+    .grid-3,
+    .grid-2 {
+        grid-template-columns: 1fr; /* Jadi 1 kolom semua */
+    }
+}
