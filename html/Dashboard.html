@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Olah.In</title>
+    <link rel="stylesheet" href="/CSS/Dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/Images/LogoOlahin.png"> 
+        </div>
+        
+        <!-- Menu navigasi utama -->
+        <header class="nav-menu">
+            <a href="Dashboard.html" class="active"> Dashboard </a>
+            <a href="MainRecipes.html"> Resep Cerdas </a>
+            <a href="#anggaran"> Anggaran </a>
+            <a href="#kelola">Kelola Bahan </a>
+        </header>
+    
+        
+        <!-- Button dan avatar di kanan -->
+        <div class="nav-right">
+            <input type="search" placeholder="Cari Resep" class="search-bar">
+            <div class="user-avatar">
+                <!-- Placeholder untuk foto user -->
+                <img src="/Images/Pfp.jpeg" alt="Foto Profil" class="user-avatar">
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <h1>Selamat pagi !</h1>
+        <h2>Yuk, Mau Olah apa hari ini?</h2>
+        <p>Olahln siap membantu kamu untuk masak lebih terencana,<br>dengan dompet yang terjaga! Yuk mulai atur dapurmu!</p>
+        <button class="btn-explore">Jelajahi Resep Saya</button>
+    </section>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Grid untuk Anggaran dan Bahan Kadaluarsa -->
+        <div class="dashboard-grid">
+            <!-- Card Anggaran Makan -->
+            <div class="card">
+                <h3>Anggaran Makan Kamu</h3>
+                <p>Ringkasan pengeluaran makanan bulanan kamu saat ini</p>
+                
+                <!-- Tampilan jumlah budget -->
+                <div class="budget-amount">
+                    Rp 1.850.000
+                    <div class="budget-subtitle">dari Rp 2.500.000 anokasi</div>
+                </div>
+                
+                <!-- Progress bar visualisasi pengeluaran -->
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                
+                <!-- Info detail budget -->
+                <div class="budget-info">
+                    <span class="budget-spent">Sisa: Rp 650.000</span>
+                    <span class="budget-category">Kategori : Belanja Bahan Pokok</span>
+                    <span class="Persentase"> 76% </span>
+                </div>
+                
+                <button class="btn-card btn-detail">Lihat Detail Anggaran</button>
+            </div>
+
+            <!-- Card Bahan Akan Kadaluarsa -->
+            <div class="card">
+                <h3>Bahan Akan Kadaluarsa</h3>
+                <p>Ini dia pantauan bahan kamu sebelum kadaluarsa!</p>
+                
+                <!-- List bahan dengan warning badge -->
+                <ul class="ingredient-list">
+                    <li class="ingredient-item">
+                        <span>Tomat Ceri</span>
+                        <span class="warning-badge warning-high">3 jam lagi</span>
+                    </li>
+                    <li class="ingredient-item">
+                        <span>Susu UHT</span>
+                        <span class="warning-badge warning-medium">1 hari lagi</span>
+                    </li>
+                    <li class="ingredient-item">
+                        <span>Daun Seledri</span>
+                        <span class="warning-badge warning-low">1 hari lagi</span>
+                    </li>
+                    <li class="ingredient-item">
+                        <span>Yoghurt Plain</span>
+                        <span class="warning-badge warning-high">3 jam lagi</span>
+                    </li>
+                </ul>
+                
+                <button class="btn-card btn-kelola">Kelola Bahan</button>
+            </div>
+        </div>
+
+        <!-- Section Resep Trending -->
+        <section class="recipes-section">
+            <h2>Resep trending berdasarkan bahan makanan yang kamu punya!</h2>
+            
+            <!-- Tab filter kategori -->
+            <div class="recipe-tabs">
+                <button class="tab-btn active">Semua</button>
+                <button class="tab-btn">Tempe</button>
+                <button class="tab-btn">Ayam</button>
+                <button class="tab-btn">Tomat</button>
+            </div>
+
+            <!-- Grid recipe cards -->
+            <div class="recipes-grid">
+                <!-- Recipe Card 1 -->
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="/Images/TempePenyek.jpeg" alt="tempe">
+                    </div>
+                    <div class="recipe-info">
+                        <div class="recipe-name">Tempe Penyet Pedas</div>
+                        <button class="btn-lihat-resep">Lihat Resep</button>
+                    </div>
+                </div>
+
+                <!-- Recipe Card 2 -->
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="/Images/AyamGeprek.jpeg" alt="Geprek">
+                    </div>
+
+                    <div class="recipe-info">
+                        <div class="recipe-name">Ayam Geprek Simple</div>
+                        <button class="btn-lihat-resep">Lihat Resep</button>
+                    </div>
+
+                </div>
+
+                <!-- Recipe Card 3 -->
+                <div class="recipe-card">
+                   <div class="recipe-image">
+                    <img src="/Images/SupTahuPedas .jpeg" alt="sup tahu">
+                   </div>
+                    <div class="recipe-info">
+                        <div class="recipe-name">Sup Tahu Pedas</div>
+                        <button class="btn-lihat-resep">Lihat Resep</button>
+                    </div>
+                </div>
+
+                <!-- Recipe Card 4 -->
+                <div class="recipe-card">
+                    <div class="recipe-image" > 
+                        <img src="/Images/TempeOrek.jpeg" alt="orek">
+                    </div>
+
+                    <div class="recipe-info">
+                        <div class="recipe-name">Orek Tempe </div>
+                        <button class="btn-lihat-resep">Lihat Resep</button>
+                    </div>
+                </div>
+
+                <!-- Recipe Card 5 -->
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="/Images/SateBumbuKacang.jpeg" alt="sate">
+                    </div>    
+                    <div class="recipe-info">
+                        <div class="recipe-name">Sate Ayam Bumbu Kacang</div>
+                        <button class="btn-lihat-resep">Lihat Resep</button>
+                    </div>
+                </div>
+
+                <!-- Recipe Card 6 -->
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="/Images/SpaghettiCarbonara.jpeg" alt="spageti">
+                    </div>
+                    <div class="recipe-info">
+                        <div class="recipe-name">Spaghetti Carbonara</div>
+                        <button class="btn-lihat-resep">Lihat Resep</button>
+                    </div>
+                </div>
+
+                <!-- Recipe Card 7 -->
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="/Images/SupTomatTelur.jpeg" alt="sup tomat">
+                    </div> 
+                    <div class="recipe-info">
+                        <div class="recipe-name">Sup Tomat Telur</div>
+                        <button class="btn-lihat-resep">Lihat Resep</button>
+                    </div>
+                </div>
+
+                <!-- Recipe Card 8-->
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="/Images/AyamMadu.jpeg" alt="ayammadu">
+                    </div> 
+                    <div class="recipe-info">
+                        <div class="recipe-name">Ayam Bakar Madu</div>
+                        <button class="btn-lihat-resep">Lihat Resep</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action buttons untuk load more atau simpan -->
+            <div class="recipe-actions">
+                <button class="btn-action primary">+ Tambah Resep Baru</button>
+                <button class="btn-action">💾 Simpan Resep di Koleksi</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Brand section -->
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="/Images/LogoOlahin.png" alt="LogoOlahin" class="footer-logo">
+                </div>
+                <p class="footer-tagline">Masak terencana, Dompet Terjaga</p>
+            </div>
+
+            <!-- Company links -->
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#careers">Careers</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+            </div>
+
+            <!-- Features links -->
+            <div class="footer-section">
+                <h4>Features</h4>
+                <ul>
+                    <li><a href="#anggaran">Anggaran</a></li>
+                    <li><a href="#kelola">Kelola Bahan</a></li>
+                    <li><a href="#resep">Resep Cerdas</a></li>
+                </ul>
+            </div>
+
+            <!-- Support links -->
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#help">Help Center</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            &copy; 2025 Olahln. Semua hak cipta dilindungi Undang-undang
+        </div>
+    </footer>
+
+</body>
+</html>
