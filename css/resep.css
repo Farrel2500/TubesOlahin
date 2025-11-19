@@ -1,0 +1,366 @@
+/* --- Reset Global & Pengaturan Font --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Header & Navigasi --- */
+header {
+    background-color: #fffaf0; /* Kuning pucat */
+    padding: 15px 0;
+    border-bottom: 1px solid #f0e6d2;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar{
+    height: 50px;
+}
+
+.logo {
+    font-family: 'Arial', sans-serif;
+    font-size: 28px;
+    color: #2e7d32; /* Hijau tua */
+    font-weight: 500;
+    padding-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    color: #4CAF50;
+    font-weight: 700;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-btn {
+    background-color: #4caf50; /* Hijau */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.search-btn:hover {
+    background-color: #388e3c;
+}
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+
+/* --- Area Hero --- */
+.hero {
+    padding-bottom: 60px; /* Kuning pucat */
+    height: 600px;
+    text-align: center;
+    padding: 160px 0px;
+}
+
+.hero::before {
+    z-index: 1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(/gambar/makanan.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay gelap untuk kontras teks */
+}
+
+.hero-text {    
+    position: relative;
+    z-index: 1;
+    color: white;
+    position: relative;
+}
+
+.hero p {
+    margin-bottom: 30px;
+}
+
+
+.hero h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 42px;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.hero h1 .highlight {
+    /* Gaya garis bawah ungu/biru */
+    text-decoration: underline;
+    text-decoration-color: #673ab7; /* Ungu */
+    text-decoration-thickness: 3px;
+    text-underline-offset: 6px;
+}
+
+.hero p {
+    font-size: 16px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+.add-recipe-btn {
+    background-color: #66bb6a; /* Hijau muda */
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-recipe-btn:hover {
+    background-color: #4caf50;
+}
+
+/* --- Area Konten Utama --- */
+.content-area {
+    padding: 40px 0;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.content-header h2 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.content-header .see-all {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* --- Grid Resep --- */
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* <-- Diperbarui jadi 3 kolom */
+    gap: 25px;
+}
+
+.recipe-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+    position: relative;
+}
+
+.card-image img {
+    width: 100%;
+    height: 225px;
+    display: block;
+    object-fit: cover;
+}
+
+.like-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #eee;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+    color: #aaa;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.like-btn:hover {
+    color: #f44336; /* Merah */
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 15px;
+    height: 40px; /* Membatasi tinggi deskripsi */
+    overflow: hidden;
+}
+
+.tags {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 8px;
+}
+
+.tag {
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-weight: 500;
+}
+
+/* Warna Tag Spesifik */
+.tag-veg { background-color: #e8f5e9; color: #388e3c; }
+.tag-time { background-color: #f1f3f4; color: #5f6368; }
+.tag-praktis { background-color: #e3f2fd; color: #1976d2; }
+.tag-tradisional { background-color: #fff3e0; color: #f57c00; }
+
+
+.view-recipe-btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #4caf50;
+    font-weight: 700;
+    border: 1px solid #a5d6a7;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.view-recipe-btn:hover {
+    background-color: #4caf50;
+    color: white;
+}
+
+/* --- Tombol FAB (Visily) --- */
+.fab {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #7c4dff; /* Ungu */
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* --- Gaya Judul Section Baru --- */
+.content-header .title-favorit {
+    color: #f57c00; /* Oranye */
+}
+
+.content-header .title-spesial {
+    color: #1976d2; /* Biru */
+}
+
+.section-subtitle {
+    font-size: 15px;
+    color: #555;
+    margin-top: -15px; /* Tarik ke atas di bawah header */
+    margin-bottom: 25px;
+}
+
+/* --- Desain Responsif --- */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Sembunyikan menu di mobile */
+    }
+    
+    .recipe-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 500px) {
+    .recipe-grid {
+        grid-template-columns: 1fr; /* 1 kolom di layar sangat kecil */
+    }
+
+    .header-actions {
+        gap: 10px;
+    }
+
+    .search-btn {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+}
