@@ -1,0 +1,294 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f3f4f8;
+  color: #333;
+  margin: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 20px auto;
+}
+
+
+.navbar {
+  background-color: #fff09dff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 40px;
+  font-size: 12px;
+  height: 30px;
+}
+
+.navbar-logo img {
+  width: 60px;        
+}
+
+.navbar-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.navbar-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.navbar-nav a.active {
+  color: #f07c00;
+}
+
+.navbar-extra {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ddd;
+}
+
+.btn {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.btn-cari {
+  background-color: #28a745;
+  color: white;
+}
+.sub-header{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin: 15px auto;
+  gap: 15px;
+}
+
+.filters select {
+  padding: 5px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+.btn-tambah {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.card-style {
+  background-color: #9c969625;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.recipe-intro {
+  margin-bottom: 25px;
+}
+
+.main-content-wrapper {
+  display: flex;
+  gap: 25px;
+}
+
+.recipe-steps {
+  flex: 2;
+}
+
+.recipe-intro h1 {
+  color: #222;
+  margin-bottom: 15px;
+  font-size: 30px;
+}
+
+.recipe-header {
+  display: flex;
+  gap: 20px;
+  background-color: #f7f7fa;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.recipe-image {
+  width: 280px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.recipe-info-box {
+  display: flex;
+  font-size: 14px;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+.btn-simpan {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.btn-bagikan {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.recipe-description {
+  margin-top: 15px;
+  font-style: italic;
+  color: #555;
+  font-size: 15px;
+  
+}
+
+.ingredients, .instructions {
+  margin-top: 25px;
+}
+
+.ingredients h3, .instructions h3 {
+  color: #222;
+  margin-bottom: 10px;
+  font-size: 27px;
+}
+
+.ingredients ul {
+  list-style-type: disc;
+  font-size: 15px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.ingredients li {
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.instructions ol {
+  list-style: decimal;
+  padding-left: 20px;
+}
+
+.instructions li {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.sidebar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background: #fff09dff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.fridge-check h4 {
+  color: #222;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: left;
+  font-size: 27px;
+}
+
+.fridge-check p {
+  font-size: 13px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.fridge-check ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.fridge-check li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.btn-stok {
+  background-color: #28a745;
+  color: white;
+}
+
+
+.tags h4 {
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  background-color: #f4bf2f;
+  color: #333;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 13px;
+}
+
+@media (max-width: 968px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .recipes-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* Responsive design untuk mobile */
+        @media (max-width: 640px) {
+            .recipes-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+        }

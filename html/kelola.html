@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelola Bahan - Olah.in</title>
+    <link rel="stylesheet" href="/css/style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="navbar-logo">
+             <img src="../img/logo olahin.png" alt="logo olahin" >
+        </div>
+        <nav class="navbar-nav">
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="resep.html">Resep Cerdas</a></li>
+                <li><a href="#">Anggaran</a></li>
+                <li><a href="#" class="active">Kelola Bahan</a></li>
+            </ul>
+        </nav>
+        <div class="navbar-extra">
+            <button class="btn btn-cari">Cari Resep</button>
+            <div class="profile-icon"></div>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <h1>Kelola Bahan Makanan</h1>
+
+        <section class="alert-cards-container">
+            <div class="alert-card alert-near-expiry">
+                <i class="fa-solid fa-bell"></i>
+                <div class="alert-text">
+                    <h3>Akan Kadaluarsa <span class="badge badge-green">Near Expiry</span></h3>
+                    <p>0 bahan, Lihat 0 item</p>
+                </div>
+                <button class="btn btn-detail">Lihat Semua</button>
+            </div>
+            <div class="alert-card alert-expired">
+                <i class="fa-solid fa-bell"></i>
+                <div class="alert-text">
+                    <h3>Kadaluarsa <span class="badge badge-red">Expired</span></h3>
+                    <p>10 bahan, Lihat 10 item</p>
+                </div>
+                <button class="btn btn-buang">Buang Semua</button>
+            </div>
+        </section>
+
+        <section class="inventory-table-card">
+            
+            <div class="card-header">
+                <div class="card-title">
+                    <h4>Semua Bahan</h4>
+                    <p>Kelola inventaris bahan dapur Anda.</p>
+                </div>
+                <button class="btn btn-tambah-bahan">+ Tambah Bahan Baru</button>
+            </div>
+
+            <div class="card-filters">
+                <input type="text" placeholder="Cari bahan...">
+                <select id="kategori">
+                    <label for="kategori">Kategori</label>
+                    <option value="semua">Semua Kategori</option>
+                    <option value="Produk Susu">Produk Susu</option>
+                    <option value="Daging">Daging</option>
+                    <option value="Bumbu">Bumbu</option>
+                    <option value="Sayuran">Sayuran</option>
+                    <select id="kategori" class="dropdown-box">
+                </select>
+                
+                </select>
+                   <select>
+                       <option value="">Semua Status</option>
+                       <option value="">Expired</option>
+                       <option value="">Good</option>
+                   </select> 
+            </div>
+
+            <table class="inventory-table">
+                <thead>
+                    <tr>
+                        <th>Nama Bahan</th>
+                        <th>Kategori</th>
+                        <th>Jumlah</th>
+                        <th>Tanggal Beli</th>
+                        <th>Tanggal Kadaluarsa</th>
+                        <th>Status</th>
+                        <th>Tindakan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Telur</td>
+                        <td>Produk Susu</td>
+                        <td>1 Lusin</td>
+                        <td>2024-03-10</td>
+                        <td>2024-03-25</td>
+                        <td><span class="status-badge status-expired">Expired</span></td>
+                        <td class="table-actions">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Susu</td>
+                        <td>Produk Susu</td>
+                        <td>1 Liter</td>
+                        <td>2024-03-15</td>
+                        <td>2024-03-20</td>
+                        <td><span class="status-badge status-expired">Expired</span></td>
+                        <td class="table-actions">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Dada Ayam</td>
+                        <td>Daging</td>
+                        <td>500g</td>
+                        <td>2024-03-18</td>
+                        <td>2024-03-28</td>
+                        <td><span class="status-badge status-good">Good</span></td> <td class="table-actions">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tomat</td>
+                        <td>Sayuran</td>
+                        <td>1 Kg</td>
+                        <td>2024-03-19</td>
+                        <td>2024-03-26</td>
+                        <td><span class="status-badge status-good">Good</span></td> <td class="table-actions">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pasta</td>
+                        <td>Pantry</td>
+                        <td>500g</td>
+                        <td>2024-03-01</td>
+                        <td>2024-03-01</td>
+                        <td><span class="status-badge status-good">Good</span></td> <td class="table-actions">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Bawang Putih</td>
+                        <td>Bumbu</td>
+                        <td>1 Kepala</td>
+                        <td>2024-03-05</td>
+                        <td>2024-03-10</td>
+                        <td><span class="status-badge status-good">Good</span></td> <td class="table-actions">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Yogurt</td>
+                        <td>Produk Susu</td>
+                        <td>4 Gelas</td>
+                        <td>2024-03-16</td>
+                        <td>2024-03-21</td>
+                        <td><span class="status-badge status-good">Good</span></td> <td class="table-actions">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Roti</td>
+                        <td>Roti</td>
+                        <td>1 Pack</td>
+                        <td>2024-03-20</td>
+                        <td>2024-03-24</td>
+                        <td><span class="status-badge status-good">Good</span></td> <td class="table-actions">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Keju Cheddar</td>
+                        <td>Produk Susu</td>
+                        <td>200 Gram</td>
+                        <td>2024-03-12</td>
+                        <td>2024-03-22</td>
+                        <td><span class="status-badge status-good">Good</span></td> <td class="table-actions">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Daging Sapi Giling</td>
+                        <td>Daging</td>
+                        <td>400 Gram</td>
+                        <td>2024-03-21</td>
+                        <td>2024-03-27</td>
+                        <td><span class="status-badge status-good">Good</span></td> <td class="table-actions">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section> </main> </body>
+</html>

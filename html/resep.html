@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olah.in - Resep Nasi Goreng</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    
+    <header class="navbar">
+        <div class="navbar-logo">
+            <img src="../img/logo olahin.png" alt="logo olahin">
+        </div>
+        <nav class="navbar-nav">
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#" class="active">Resep Cerdas</a></li>
+                <li><a href="#">Anggaran</a></li>
+                <li><a href="kelola.html">Kelola Bahan</a></li>
+            </ul>
+        </nav>
+        <div class="navbar-extra">
+            <button class="btn btn-cari">Cari Resep</button>
+            <div class="profile-icon"></div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="sub-header">
+            <div class="action">
+                <select name="urutan" class="select-kategori">
+                    <option value="semua">Semua Kategori</option>
+                    <option value="indonesia">Masakan Indonesia</option>
+                    <option value="barat">Masakan Barat</option>
+                    <option value="jepang">Masakan Jepang</option>
+                    <option value="italia">Masakan Italia</option>
+                    <label for="kategori">Kategori</label>
+                    </select>
+                </div>
+                </select>
+
+                <select name="urutan">
+                    <option value="">Urutkan Berdasarkan</option>
+                    <option value="popularitas">Popularitas (Jumlah Like)</option>
+                    <option value="negara">Negara</option>
+                    <option value="level">Level Kesulitan</option>
+                    <option value="bahan">Bahan</option>
+                </select>
+            </div>
+            
+            <button class="btn btn-tambah">+ Tambah Resep Baru</button>
+        </section>
+
+        <div class="recipe-container">
+
+            <section class="recipe-intro card-style">
+                <h1>Nasi Goreng Spesial</h1>
+
+                <div class="recipe-header">
+                    <img src="../img/nasi-goreng.jpeg" alt="Nasi Goreng Spesial" class="recipe-image">
+
+                    <div class="recipe-info-box">
+                        <div class="info-item">
+                           <i class="fa-solid fa-clock"></i> 30 menit
+
+                        </div>
+                        <div class="info-item">
+                            <i class="fa-solid fa-star"></i> 4.5 (80 Ulasan)
+                        </div>
+                        <div class="info-item">
+                            <i class="fa-solid fa-bowl-food"></i> 1-5 orang
+                        </div>
+                        <button class="btn btn-simpan">
+                            <i class="fa-solid fa-bookmark"></i> Simpan Resep
+                        </button>
+                        <button class="btn btn-bagikan">
+                            <i class="fa-solid fa-share-nodes"></i> Bagikan
+                        </button>
+                    </div>
+                </div>
+
+                <p class="recipe-description">
+                    Resep nasi goreng klasik dengan sentuhan modern, mudah dibuat dan lezat.
+                </p>
+            </section>
+
+                <div class="main-content-wrapper">
+                    <article class="recipe-steps card-style">
+                        <section class="ingredients">
+                            <h3>Bahan-bahan</h3>
+                            <ul>
+                                <li>2 piring Nasi Putih</li>
+                                <li>Minyak Goreng</li>
+                                <li>100 gram Daging ayam</li>
+                                <li>2 butir Telur</li>
+                                <li>3 siung bawang putih</li>
+                                <li>2 siung bawang merah</li>
+                                <li>2 sdm Kecap manis</li>
+                                <li>1 sdm Saus tiram</li>
+                                <li>Garam, merica, dan kaldu bubuk secukupnya.</li>
+                                <li>Daun bawang dan bawang goreng.</li>
+                            </ul>
+                        </section>
+
+                            <section class="instructions">
+                                <h3>Langkah-langkah</h3>
+                                <ol>
+                                    <li>Panaskan sedikit minyak diwajan, lalu buat telur orak arik. Jika sudah matang angkat dan sisihkan terlebih dahulu.</li>
+                                    <li>Gunakan wajan yang sama, tumis bawang putih dan bawang merah yang sudah dipotong potong hingga harum. Setelah harum, masukkan potongan daging ayam dan masak hingga berubah warna dan matang.</li>
+                                    <li>Masukkan 2 piring nasi putih, aduk aduk hingga tercampur rata dengan bumbu tumisan.</li>
+                                    <li>Tambahkan kecap manis, saus tiram, garam, merica, dan kaldu bubuk secukupnya. Besarkan api sedikit dan aduk cepat hingga semua bumbu tercampur rata dan nasi sedikit kering.</li>
+                                    <li>Masukkan kembali telur orak arik yang sudah disisihkan tadi dan tambahkan irisan daun bawang. Aduk sebentar hingga semua tercampur.</li>
+                                    <li>Angkat dan sajikan nasi goreng dipiring, beri taburan bawang gorang diatasnya agar lebih nikmat.</li>
+                                </ol>
+                            </section>
+                    </article>
+                    
+                     <aside class="sidebar">
+                         <div class="card fridge-check">
+                             <h4>Cek Kulkas Anda!</h4>
+                             <p>Bahan Tersedia:</p>
+                             <ul>
+                             <li><i class="fa-solid fa-circle-check" style="color: #33bc29;"></i> Nasi putih, Daging ayam, Bawang putih</li>
+                             <li><i class="fa-solid fa-circle-xmark fa-flip-both" style="color: #e70d2e;"></i>Saus Tiram</li>
+                             </ul>
+                            <button class="btn btn-stok">Cek Stok Bahan</button>
+                         </div>
+
+                            <div class="card tags">
+                             <h4>Tags</h4>
+                             <div class="tag-list">
+                            <span class="tag">Sarapan</span>
+                            <span class="tag">Murah</span>
+                            <span class="tag">Lezat</span>
+                        </div>
+                </aside>
+                </div>
+        </div>
+    </main>
+
+</body>
+</html>
