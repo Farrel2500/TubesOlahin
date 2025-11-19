@@ -539,7 +539,7 @@ h1, h2, h3, h4 {
 .footer-content {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 40px;
+    padding-bottom: 1px;
 }
 
 .footer-logo {
