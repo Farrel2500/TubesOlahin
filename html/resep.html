@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="id">
-<<<<<<< HEAD
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,13 +24,15 @@
         </nav>
         <div class="navbar-extra">
             <button class="btn btn-cari">Cari Resep</button>
-            <div class="profile-icon"></div>
+            <div class="profile-icon">
+                <img src="https://img.freepik.com/premium-photo/3d-image-young-beautiful-woman-teacher_853558-54667.jpg" class="avatar-profile" alt="User">
+            </div>
         </div>
     </header>
 
     <main class="container">
         <section class="sub-header">
-            <div class="action">
+            <div class="filters">
                 <select name="urutan" class="select-kategori">
                     <option value="semua">Semua Kategori</option>
                     <option value="indonesia">Masakan Indonesia</option>
@@ -40,10 +41,10 @@
                     <option value="italia">Masakan Italia</option>
                     <label for="kategori">Kategori</label>
                     </select>
-                </div>
+        
                 </select>
 
-                <select name="urutan">
+                <select name="urutan" class="select-kategori">
                     <option value="">Urutkan Berdasarkan</option>
                     <option value="popularitas">Popularitas (Jumlah Like)</option>
                     <option value="negara">Negara</option>
@@ -87,386 +88,172 @@
                     Resep nasi goreng klasik dengan sentuhan modern, mudah dibuat dan lezat.
                 </p>
             </section>
-
-                <div class="main-content-wrapper">
-                    <article class="recipe-steps card-style">
-                        <section class="ingredients">
-                            <h3>Bahan-bahan</h3>
-                            <ul>
-                                <li>2 piring Nasi Putih</li>
-                                <li>Minyak Goreng</li>
-                                <li>100 gram Daging ayam</li>
-                                <li>2 butir Telur</li>
-                                <li>3 siung bawang putih</li>
-                                <li>2 siung bawang merah</li>
-                                <li>2 sdm Kecap manis</li>
-                                <li>1 sdm Saus tiram</li>
-                                <li>Garam, merica, dan kaldu bubuk secukupnya.</li>
-                                <li>Daun bawang dan bawang goreng.</li>
-                            </ul>
-                        </section>
-
-                            <section class="instructions">
-                                <h3>Langkah-langkah</h3>
-                                <ol>
-                                    <li>Panaskan sedikit minyak diwajan, lalu buat telur orak arik. Jika sudah matang angkat dan sisihkan terlebih dahulu.</li>
-                                    <li>Gunakan wajan yang sama, tumis bawang putih dan bawang merah yang sudah dipotong potong hingga harum. Setelah harum, masukkan potongan daging ayam dan masak hingga berubah warna dan matang.</li>
-                                    <li>Masukkan 2 piring nasi putih, aduk aduk hingga tercampur rata dengan bumbu tumisan.</li>
-                                    <li>Tambahkan kecap manis, saus tiram, garam, merica, dan kaldu bubuk secukupnya. Besarkan api sedikit dan aduk cepat hingga semua bumbu tercampur rata dan nasi sedikit kering.</li>
-                                    <li>Masukkan kembali telur orak arik yang sudah disisihkan tadi dan tambahkan irisan daun bawang. Aduk sebentar hingga semua tercampur.</li>
-                                    <li>Angkat dan sajikan nasi goreng dipiring, beri taburan bawang gorang diatasnya agar lebih nikmat.</li>
-                                </ol>
-                            </section>
-                    </article>
-                    
-                     <aside class="sidebar">
-                         <div class="card fridge-check">
-                             <h4>Cek Kulkas Anda!</h4>
-                             <p>Bahan Tersedia:</p>
-                             <ul>
-                             <li><i class="fa-solid fa-circle-check" style="color: #33bc29;"></i> Nasi putih, Daging ayam, Bawang putih</li>
-                             <li><i class="fa-solid fa-circle-xmark fa-flip-both" style="color: #e70d2e;"></i>Saus Tiram</li>
-                             </ul>
-                            <button class="btn btn-stok">Cek Stok Bahan</button>
-                         </div>
-
-                            <div class="card tags">
-                             <h4>Tags</h4>
-                             <div class="tag-list">
-                            <span class="tag">Sarapan</span>
-                            <span class="tag">Murah</span>
-                            <span class="tag">Lezat</span>
-                        </div>
-                </aside>
-                </div>
         </div>
+            <div class="recipe-layout">
+                
+                <div class="left-content">
+                    <div class="ingredients-box">
+                     <h3>Bahan-bahan</h3> 
+                     <ul>
+                        <li>2 piring Nasi Putih</li>
+                        <li>Minyak Goreng</li>
+                        <li>100 gram Daging ayam</li>
+                        <li>2 butir Telur</li>
+                        <li>3 siung bawang putih</li>
+                        <li>2 siung bawang merah</li>
+                        <li>2 sdm Kecap manis</li>
+                        <li>1 sdm Saus tiram</li>
+                        <li>Garam, merica, dan kaldu bubuk secukupnya.</li>
+                        <li>Daun bawang dan bawang goreng.</li>
+                     </ul>
+                    </div>
+    
+                    <div class="steps-box">
+                        <h3>Langkah-langkah</h3>
+                            <ol class="cooking-steps">
+                            <li>Panaskan sedikit minyak diwajan, lalu buat telur orak arik. Jika sudah matang angkat dan sisihkan terlebih dahulu.</li>
+                            <li>Gunakan wajan yang sama, tumis bawang putih dan bawang merah yang sudah dipotong potong hingga harum. Setelah harum, masukkan potongan daging ayam dan masak hingga berubah warna dan matang.</li>
+                            <li>Masukkan 2 piring nasi putih, aduk aduk hingga tercampur rata dengan bumbu tumisan.</li>
+                            <li>Tambahkan kecap manis, saus tiram, garam, merica, dan kaldu bubuk secukupnya. Besarkan api sedikit dan aduk cepat hingga semua bumbu tercampur rata dan nasi sedikit kering.</li>
+                            <li>Masukkan kembali telur orak arik yang sudah disisihkan tadi dan tambahkan irisan daun bawang. Aduk sebentar hingga semua tercampur.</li>
+                            <li>Angkat dan sajikan nasi goreng dipiring, beri taburan bawang gorang diatasnya agar lebih nikmat.</li>
+                            </ol>
+                    </div>
+
+                </div>
+       
+                <aside class="sidebar">
+                 <div class="card fridge-check">
+                     <h4>Cek Kulkas Anda!</h4>
+                     <p>Bahan Tersedia:</p>
+                        <ul>
+                         <li><i class="fa-solid fa-circle-check" style="color: #33bc29;"></i> Nasi putih</li>
+                         <li><i class="fa-solid fa-circle-check" style="color: #33bc29;"></i> Daging ayam</li>
+                         <li><i class="fa-solid fa-circle-check" style="color: #33bc29;"></i> Bawang putih</li>
+                         <li><i class="fa-solid fa-circle-check" style="color: #33bc29;"></i> Bawang merah</li>
+                         <li><i class="fa-solid fa-circle-check" style="color: #33bc29;"></i> Kecap manis</li>
+                         <li><i class="fa-solid fa-circle-xmark fa-flip-both" style="color: #e70d2e;"></i>Daun bawang</li>
+                         <li><i class="fa-solid fa-circle-xmark fa-flip-both" style="color: #e70d2e;"></i>Saus Tiram</li>
+                         <li><i class="fa-solid fa-circle-xmark fa-flip-both" style="color: #e70d2e;"></i>Bawang goreng </li>
+                        </ul>
+                            <button class="btn btn-stok">Cek Stok Bahan</button>
+                    </div>        
+                    <div claass="nutrition-card">
+                     <h3>Informasi Gizi</h3>
+        
+                     <div class="nutrient-item">
+                         <div class="nutrient-header">
+                             <span>Kalori</span>
+                             <span class="value">450 Kalori (30%)</span>
+                         </div>
+                         <div class="progress-bg"><div class="progress-fill" style="width: 30%;"></div></div>
+                     </div>
+                     <div class="nutrient-item">
+                         <div class="nutrient-header">
+                             <span>Protein</span>
+                             <span class="value">25g (40%)</span>
+                         </div>
+                         <div class="progress-bg"><div class="progress-fill" style="width: 40%;"></div></div>
+                     </div>
+                     <div class="nutrient-item">
+                         <div class="nutrient-header">
+                             <span>Lemak</span>
+                             <span class="value">15g (20%)</span>
+                         </div>
+                         <div class="progress-bg"><div class="progress-fill" style="width: 20%;"></div></div>
+                     </div>
+                     <div class="nutrient-item">
+                         <div class="nutrient-header">
+                             <span>Karbohidrat</span>
+                             <span class="value">50g (18%)</span>
+                         </div>
+                         <div class="progress-bg"><div class="progress-fill" style="width: 18%;"></div></div>
+                     </div>
+                </aside>
+            </div>
+    
+            
+            <div class="related-section">
+                <h3>Resep Terkait</h3>
+                <div class="recipe-grid">
+                    <div class="recipe-card">
+                        <img src="https://cdn0-production-images-kly.akamaized.net/rF9J7T6wYPBakuzlp-ym1JveG6w=/0x342:5989x3718/1200x675/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/3930827/original/066100900_1644554867-shutterstock_1984582070.jpg" alt="Mie Goreng">
+                        <div class="card-info">
+                            <h4>Mie Goreng Jawa</h4>
+                            <span class="time"><i class="icon-clock"></i> 35 Menit</span>
+                        </div>
+                    </div>
+                    <div class="recipe-card">
+                        <img src="https://img.freepik.com/premium-photo/picture-ayam-goreng_871710-36904.jpg" alt="Ayam Goreng">
+                        <div class="card-info">
+                            <h4>Ayam Goreng Mentega</h4>
+                            <span class="time"><i class="icon-clock"></i> 45 Menit</span>
+                        </div>
+                    </div>
+                    <div class="recipe-card">
+                        <img src="https://thumbs.dreamstime.com/b/sayur-asam-sayur-asem-tamarind-soup-popular-traditional-indonesian-soup-common-ingredients-chayote-long-beans-corn-221615754.jpg" alt="Sayur Asem">
+                        <div class="card-info">
+                            <h4>Sayur Asem</h4>
+                            <span class="time"><i class="icon-clock"></i> 40 Menit</span>
+                        </div>
+                    </div>
+                    <div class="recipe-card">
+                        <img src="https://i.ytimg.com/vi/LuNuindkPVk/maxresdefault.jpg" alt="Sate Lilit">
+                        <div class="card-info">
+                            <h4>Sate Lilit Bali</h4>
+                            <span class="time"><i class="icon-clock"></i> 50 Menit</span>
+                        </div>
+                    </div>
+                    <div class="recipe-card">
+                        <img src="https://img-global.cpcdn.com/recipes/4a56524eb825e9fb/680x482cq70/gulai-ayam-khas-minang-foto-resep-utama.jpg" alt="Gulai Ayam">
+                        <div class="card-info">
+                            <h4>Gulai Ayam Padang</h4>
+                            <span class="time"><i class="icon-clock"></i> 60 Menit</span>
+                        </div>
+                    </div>
+                    <div class="recipe-card">
+                        <img src="https://thumb.viva.id/vivabanyuwangi/1265x711/2025/02/27/67bf878341376-ilustrasi-sop-buntut_banyuwangi.jpg" alt="Sop Buntut">
+                        <div class="card-info">
+                            <h4>Sop Buntut</h4>
+                            <span class="time"><i class="icon-clock"></i> 90 menit</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comments-section">
+                <h3>Komentar & Ulasan</h3>
+
+                <div class="comment-item">
+                    <img src="https://img.freepik.com/premium-photo/happy-man-ai-generated-portrait-user-profile_1119669-1.jpg?w=2000" class="avatar" alt="User">
+                    <div class="comment-content">
+                        <div class="User-name">Budi Santoso</div>
+                        <div class="stars">★★★★★</div>
+                        <p>Resepnya sangat mudah diikuti dan hasilnya lezat sekali! Keluarga suka. Pasti akan saya coba lagi minggu depan.</p>
+                    </div>
+                </div>
+                <div class="comment-item">
+                    <img src="https://img.freepik.com/premium-photo/girl-happy-portrait-user-profile-by-ai_1119669-10.jpg" class="avatar" alt="User">
+                    <div class="comment-content">
+                        <div class="User-name">Siti Rahayu</div>
+                        <div class="stars">★★★★☆</div>
+                        <p>Sedikit modifikasi bumbu, tapi tetap enak. Terima kasih resepnya, sangat membantu untuk ide masakan sehari-hari.</p>
+                    </div>
+                </div>
+                <div class="comment-item">
+                    <img src="https://img.freepik.com/premium-photo/portrait-professional-woman-suit-business-woman-standing-office-generative-ai_868783-4132.jpg" class="avatar" alt="User">
+                    <div class="comment-content">
+                        <div class="User-name">Jasmine Arina</div>
+                        <div class="stars">★★★★★</div>
+                        <p>Nasi goreng terenak yang pernah saya buat. Wajib dicoba! Rasa rempahnya pas dan pedasnya nendang.</p>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="olahin-footer">
+                <p>&copy; 2025 OlahIn. Semua Hak Dilindungi.</p>
+            </footer>
     </main>
 
 </body>
 </html>
-=======
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Koleksi Resep Anda - Olah.in</title>
-    <link rel="stylesheet" href="/css/resep.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <nav class="navbar">
-          <div class="logo">
-            <img
-              src="/gambar/olahin.png"
-              alt="Olah.in Logo"
-              class="logo-image"
-              height="70"
-            />
-          </div>
-          <ul>
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="/html/resep.html">Resep Cerdas</a></li>
-            <li><a href="#">Anggaran</a></li>
-            <li><a href="#">Kelola Bahan</a></li>
-            <li><a href="#" class="active">Koleksi Resep</a></li>
-          </ul>
-          <div class="header-actions">
-            <button class="search-btn">Cari resep</button>
-            <img
-              src="https://via.placeholder.com/40"
-              alt="Profil Pengguna"
-              class="profile-icon"
-            />
-          </div>
-        </nav>
-      </div>
-    </header>
-
-    <main>
-      <section class="hero">
-        <div class="hero-container">
-          <div class="hero-text">
-            <h1>Koleksi Resep <span class="highlight">Anda</span></h1>
-            <p>
-              Atur dan temukan kembali resep favorit Anda. Dari yang sudah
-              dicoba hingga yang spesial, semuanya ada disini!
-            </p>
-            <button class="add-recipe-btn">+ Tambah Resep Baru</button>
-          </div>
-        </div>
-      </section>
-
-      <section class="content-area">
-        <div class="container">
-          <div class="content-header">
-            <h2>Resep Dicoba</h2>
-            <a href="#" class="see-all">Lihat Semua</a>
-          </div>
-
-          <div class="recipe-grid">
-            <div class="recipe-card">
-              <div class="card-image">
-                <img
-                  src="https://via.placeholder.com/300x225/cccccc/888888?text=Gado-gado"
-                  alt="Gado-gado Nusantara"
-                />
-                <button class="like-btn">♡</button>
-              </div>
-              <div class="card-content">
-                <h3>Gado-gado Nusantara</h3>
-                <p>
-                  Dengan saus kacang istimewa yang kental dan perpaduan bumbu
-                  rempah...
-                </p>
-                <div class="tags">
-                  <span class="tag tag-veg">Vegetarian</span>
-                  <span class="tag tag-time">30 Menit</span>
-                </div>
-                <a href="#" class="view-recipe-btn">Lihat Resep</a>
-              </div>
-            </div>
-
-            <div class="recipe-card">
-              <div class="card-image">
-                <img
-                  src="https://via.placeholder.com/300x225/cccccc/888888?text=Nasi+Goreng"
-                  alt="Nasi Goreng Kampung"
-                />
-                <button class="like-btn">♡</button>
-              </div>
-              <div class="card-content">
-                <h3>Nasi Goreng Kampung</h3>
-                <p>
-                  Resep nasi goreng kilat dengan bumbu rempah sederhana, favorit
-                  keluarga.
-                </p>
-                <div class="tags">
-                  <span class="tag tag-praktis">Praktis</span>
-                  <span class="tag tag-time">20 Menit</span>
-                </div>
-                <a href="#" class="view-recipe-btn">Lihat Resep</a>
-              </div>
-            </div>
-
-            <div class="recipe-card">
-              <div class="card-image">
-                <img
-                  src="https://via.placeholder.com/300x225/cccccc/888888?text=Sate+Ayam"
-                  alt="Sate Ayam Madura"
-                />
-                <button class="like-btn">♡</button>
-              </div>
-              <div class="card-content">
-                <h3>Sate Ayam Madura</h3>
-                <p>
-                  Sate ayam bumbu kacang khas madura dengan bumbu bakaran
-                  otentik.
-                </p>
-                <div class="tags">
-                  <span class="tag tag-tradisional">Tradisional</span>
-                  <span class="tag tag-time">45 Menit</span>
-                </div>
-                <a href="#" class="view-recipe-btn">Lihat Resep</a>
-              </div>
-            </div>
-
-            <div class="recipe-card">
-              <div class="card-image">
-                <img
-                  src="https://via.placeholder.com/300x225/cccccc/888888?text=Sop+Buntut"
-                  alt="Sop Buntut Spesial"
-                />
-                <button class="like-btn">♡</button>
-              </div>
-              <div class="card-content">
-                <h3>Sop Buntut Spesial</h3>
-                <p>
-                  Sup buntut sapi dengan kuah bening rempah dan potongan sayuran
-                  segar.
-                </p>
-                <div class="tags">
-                  <span class="tag tag-tradisional">Tradisional</span>
-                  <span class="tag tag-time">120 Menit</span>
-                </div>
-                <a href="#" class="view-recipe-btn">Lihat Resep</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="content-area">
-        <div class="container">
-          <div class="content-header">
-            <h2 class="title-favorit">Resep Favorit</h2>
-            <a href="#" class="see-all">Lihat Semua</a>
-          </div>
-          <p class="section-subtitle">
-            Resep yang sangat Anda sukai dan ingin selalu mudah diakses. Permata
-            kuliner Anda!
-          </p>
-
-          <div class="recipe-grid">
-            <div class="recipe-card">
-              <div class="card-image">
-                <img
-                  src="https://via.placeholder.com/300x225/cccccc/888888?text=Rendang"
-                  alt="Rendang Daging Sapi"
-                />
-                <button class="like-btn">♡</button>
-              </div>
-              <div class="card-content">
-                <h3>Rendang Daging Sapi</h3>
-                <p>
-                  Rendang asli Padang yang dimasak perlahan hingga bumbu meresap
-                  sempurna.
-                </p>
-                <div class="tags">
-                  <span class="tag tag-tradisional">Pedas</span>
-                  <span class="tag tag-tradisional">Rendang</span>
-                </div>
-                <a href="#" class="view-recipe-btn">Lihat Resep</a>
-              </div>
-            </div>
-
-            <div class="recipe-card">
-              <div class="card-image">
-                <img
-                  src="https://via.placeholder.com/300x225/cccccc/888888?text=Pempek"
-                  alt="Pempek Palembang"
-                />
-                <button class="like-btn">♡</button>
-              </div>
-              <div class="card-content">
-                <h3>Pempek Palembang</h3>
-                <p>
-                  Pempek lembut dengan cuko sedap, menu camilan khas Sumatera
-                  Selatan.
-                </p>
-                <div class="tags">
-                  <span class="tag tag-time">Ikan</span>
-                  <span class="tag tag-tradisional">Goreng</span>
-                </div>
-                <a href="#" class="view-recipe-btn">Lihat Resep</a>
-              </div>
-            </div>
-
-            <div class="recipe-card">
-              <div class="card-image">
-                <img
-                  src="https://via.placeholder.com/300x225/cccccc/888888?text=Martabak"
-                  alt="Martabak Manis Cokelat Keju"
-                />
-                <button class="like-btn">♡</button>
-              </div>
-              <div class="card-content">
-                <h3>Martabak Manis Cokelat Keju</h3>
-                <p>
-                  Martabak tebal dan lembut dengan topping cokelat, keju, dan
-                  susu kental manis.
-                </p>
-                <div class="tags">
-                  <span class="tag tag-tradisional">Manis</span>
-                  <span class="tag tag-tradisional">Cemilan</span>
-                </div>
-                <a href="#" class="view-recipe-btn">Lihat Resep</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="content-area">
-        <div class="container">
-          <div class="content-header">
-            <h2 class="title-spesial">Resep Spesial</h2>
-            <a href="#" class="see-all">Lihat Semua</a>
-          </div>
-          <p class="section-subtitle">
-            Resep unik dan sentimental seperti resep warisan keluarga atau
-            masakan khusus perayaan.
-          </p>
-
-          <div class="recipe-grid">
-            <div class="recipe-card">
-              <div class="card-image">
-                <img
-                  src="https://via.placeholder.com/300x225/cccccc/888888?text=Sop+Ayam"
-                  alt="Sop Ayam Warisan Nenek"
-                />
-                <button class="like-btn">♡</button>
-              </div>
-              <div class="card-content">
-                <h3>Sop Ayam Warisan Nenek</h3>
-                <p>
-                  Resep sop ayam kampung dengan kuah kaldu bening khas resep
-                  nenek.
-                </p>
-                <div class="tags">
-                  <span class="tag tag-praktis">Keluarga</span>
-                  <span class="tag tag-praktis">Warisan</span>
-                </div>
-                <a href="#" class="view-recipe-btn">Lihat Resep</a>
-              </div>
-            </div>
-
-            <div class="recipe-card">
-              <div class="card-image">
-                <img
-                  src="https://via.placeholder.com/300x225/cccccc/888888?text=Kue+Lapis"
-                  alt="Kue Lapis Pandan"
-                />
-                <button class="like-btn">♡</button>
-              </div>
-              <div class="card-content">
-                <h3>Kue Lapis Pandan</h3>
-                <p>
-                  Kue lapis dengan aroma pandan yang khas, manis, dan lembut.
-                </p>
-                <div class="tags">
-                  <span class="tag tag-tradisional">Manisan</span>
-                  <span class="tag tag-tradisional">Tradisional</span>
-                </div>
-                <a href="#" class="view-recipe-btn">Lihat Resep</a>
-              </div>
-            </div>
-
-            <div class="recipe-card">
-              <div class="card-image">
-                <img
-                  src="https://via.placeholder.com/300x225/cccccc/888888?text=Sambal"
-                  alt="Sambal Terasi Istimewa"
-                />
-                <button class="like-btn">♡</button>
-              </div>
-              <div class="card-content">
-                <h3>Sambal Terasi Istimewa</h3>
-                <p>
-                  Sambal terasi yang selalu membuat masakan jadi lebih nikmat,
-                  resep rahasia keluarga.
-                </p>
-                <div class="tags">
-                  <span class="tag tag-tradisional">Pelengkap</span>
-                  <span class="tag tag-tradisional">Pedas</span>
-                </div>
-                <a href="#" class="view-recipe-btn">Lihat Resep</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <button class="fab">⚡️ Visily</button>
-  </body>
-</html>
->>>>>>> 76a5f9524044cef1bc63d49d5da592ce98c6018a

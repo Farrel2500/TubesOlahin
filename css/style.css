@@ -29,7 +29,7 @@ body {
 }
 
 .navbar-logo img {
-  width: 60px;        
+  width: 80px;        
 }
 
 .navbar-nav ul {
@@ -54,11 +54,11 @@ body {
   gap: 10px;
 }
 
-.profile-icon {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #ddd;
+.avatar-profile {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .btn {
@@ -73,6 +73,7 @@ body {
 .btn-cari {
   background-color: #28a745;
   color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 .sub-header{
   display: flex;
@@ -84,25 +85,41 @@ body {
 }
 
 .filters select {
-  padding: 5px 12px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 14px;
+    padding: 10px 15px;          
+    border-radius: 8px;          
+    border: 1px solid #e0e0e0;   
+    background-color: #ffffff;   
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    color: #555;                 
+    cursor: pointer;             
+    outline: none;               
+    transition: all 0.3s ease;   
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03); 
+    height: 40px; 
 }
+
+.filters select:hover {
+    border-color: #121312;     
+}
+
 .btn-tambah {
+  padding: 10px 15px;
   background-color: #28a745;
   color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .card-style {
-  background-color: #9c969625;
+  background-color: #f3f4f8;
   padding: 25px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  border: 1px solid #eaeaea;
 }
 
 .recipe-intro {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .main-content-wrapper {
@@ -145,6 +162,8 @@ body {
 .btn-simpan {
   background-color: #28a745;
   color: #fff;
+  font-family: sans-serif;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .btn-bagikan {
@@ -160,38 +179,69 @@ body {
   
 }
 
-.ingredients, .instructions {
-  margin-top: 25px;
+.recipe-layout {
+    display: flex;           
+    gap: 30px;               
+    width: 100%;              
+    max-width: 1400px;       
+    margin: 20px auto;       
+    align-items: flex-start; 
 }
 
-.ingredients h3, .instructions h3 {
-  color: #222;
-  margin-bottom: 10px;
-  font-size: 27px;
+/* --- Kolom Kiri (Untuk Bahan & Langkah) --- */
+.left-content {
+    flex: 2;                 
+    display: flex;           
+    flex-direction: column;  
+    width: 100%;
 }
 
-.ingredients ul {
-  list-style-type: disc;
-  font-size: 15px;
-  padding-left: 20px;
-  margin-bottom: 20px;
+
+/* --- Style untuk Kotak Bahan & Kotak Langkah (Kartu Putih) --- */
+.ingredients-box, 
+.steps-box {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #eaeaea;
+    background-color: #ffffff; 
+    padding: 24px;             
+    border-radius: 12px;       
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+    margin-bottom: 24px;       
+    font-family: 'Poppins', sans-serif; 
 }
 
-.ingredients li {
-  color: #555;
-  margin-bottom: 8px;
+/* --- Mempercantik Judul (Bahan-bahan & Langkah-langkah) --- */
+.ingredients-box h3, 
+.steps-box h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0; 
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
 }
 
-.instructions ol {
-  list-style: decimal;
-  padding-left: 20px;
+/* --- Merapikan List Bahan (Titik-titik) --- */
+.ingredients-box ul {
+    padding-left: 20px;
+    line-height: 1.8; 
+    color: #444;
 }
 
-.instructions li {
-  font-size: 15px;
-  color: #555;
-  margin-bottom: 15px;
-  line-height: 1.6;
+/* --- Merapikan List Langkah (Angka 1, 2, 3) --- */
+.steps-box .cooking-steps {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.steps-box .cooking-steps li {
+    margin-bottom: 15px; 
+    line-height: 1.6;
+    color: #555;
+    font-size: 15px;
+    padding-left: 5px;   
 }
 
 .sidebar {
@@ -203,9 +253,9 @@ body {
 
 .card {
   background: #fff09dff;
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
 .fridge-check h4 {
@@ -244,25 +294,189 @@ body {
   color: white;
 }
 
-
-.tags h4 {
-  color: #222;
-  margin-bottom: 10px;
+/* --- KARTU INFORMASI GIZI --- */
+.nutrition-card {
+    background: #fff;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
-.tag-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+.nutrition-card h3 {
+    margin-top: 0;
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
-.tag {
-  background-color: #f4bf2f;
-  color: #333;
-  border-radius: 20px;
-  padding: 5px 10px;
-  font-size: 13px;
+.nutrient-item {
+    margin-bottom: 15px;
 }
+
+.nutrient-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.nutrient-header .value {
+    color: #666;
+    font-weight: normal;
+    font-size: 13px;
+}
+
+.progress-bg {
+    background-color: #e0e0e0;
+    height: 6px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    background-color: #6cbd45; 
+    height: 100%;
+    border-radius: 10px;
+}
+
+
+/* --- RESEP TERKAIT --- */
+.related-section {
+    margin-bottom: 60px;
+}
+
+.related-section h3 {
+    font-size: 20px;
+    margin-bottom: 24px;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 24px;
+}
+
+.recipe-card {
+  background-color: fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    box-shadow: 0.3s ease;
+    cursor: pointer;
+}
+
+.recipe-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.card-info {
+    padding: 12px 0;
+}
+
+.card-info h4 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.card-info .time {
+    font-size: 13px;
+    color: #777;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Icon jam sederhana dengan CSS */
+.icon-clock::before {
+    content: "🕒"; 
+}
+
+/* --- KOMENTAR & ULASAN --- */
+.comments-section {
+    background-color: #fff; 
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.comments-section h3 {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.comment-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 30px;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-name {
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 4px;
+    color: #222;
+}
+
+.stars {
+    color: #f4c150; 
+    letter-spacing: 1px;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.comment-content p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* --- FOOTER --- */
+.olahin-footer {
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid #eee;
+    font-size: 12px;
+    color: #999;
+    margin-top: 40px;
+}
+
+/* Responsive: Agar rapi di HP */
+@media (max-width: 768px) {
+    .top-section {
+        flex-direction: column;
+    }
+    .recipe-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
 
 @media (max-width: 968px) {
             .dashboard-grid {
@@ -278,7 +492,7 @@ body {
             }
         }
 
-        /* Responsive design untuk mobile */
+       
         @media (max-width: 640px) {
             .recipes-grid {
                 grid-template-columns: 1fr;

@@ -29,7 +29,7 @@ body {
 
 
 .navbar-logo img {
-  width:60px;    
+  width:80px;    
   height: auto;    
 }
 
@@ -55,11 +55,11 @@ body {
   gap: 10px;
 }
 
-.profile-icon {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #ddd;
+.avatar-profile {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .btn {
@@ -76,95 +76,151 @@ body {
   color: white;
 }
 
-.alert-cards-container {
-    display: flex; 
-    gap: 30px; 
-    margin-bottom: 32px;
-}    
-
 h1 {
     font-size: 26px;
     margin-bottom: 20px;
     padding: 10px;
-    font-family: Adamina; 
+    font-family: 'poppins'; 
 }
 
-.alert-card {
-    flex: 1; 
+/* --- CONTAINER (Agar kartu sejajar kiri-kanan) --- */
+.alert-cards-container {
     display: flex;
+    gap: 24px; 
+    margin-bottom: 32px;
+    width: 100%;
+}
+
+/* --- STYLE DASAR KARTU --- */
+.card-expiry {
+    flex: 1; 
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: sans-serif; 
+}
+
+/* --- WARNA BACKGROUND KARTU --- */
+/* Kartu Kiri (Putih) */
+.card-white {
+    background-color: #c6f3ba;
+    border: 1px solid #E5E7EB; 
+}
+
+/* Kartu Kanan (Merah Muda) */
+.card-red {
+    background-color: #FFE4E6; 
+    border: 1px solid #FECDD3;
+}
+
+/* --- BAGIAN HEADER (Icon & Judul) --- */
+.card-header {
+    display: flex;
+    justify-content: space-between;
     align-items: center; 
-    padding: 16px;
-    border-radius: 12px;
-    gap: 15px; 
+    margin-bottom: 20px;
 }
 
-.alert-near-expiry {
-    background-color: rgb(142, 246, 142); 
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.alert-near-expiry .fa-bell {
-  color: #28a745; 
-  padding: 24px;
-}
-
-.alert-expired {
-    background-color: #f57373; 
-}
-.alert-expired .fa-bell { 
-  color: #f80f26; 
-} 
-
-.alert-card .fa-bell {
+.header-left i {
     font-size: 18px;
 }
 
-.alert-text h3 {
+.header-left h3 {
+    margin: 0;
     font-size: 16px;
-    margin-bottom: 0;
-}
-.alert-text p {
-    font-size: 12px;
-    color: #555;
-    margin-top: 0;
+    font-weight: 700;
 }
 
-
-.alert-card button {
-    margin-left: auto; 
+/* Warna Icon & Judul */
+.card-white .header-left h3, 
+.card-white .header-left i { 
+    color: #F59E0B; 
 }
 
+.card-red .header-left h3,
+.card-red .header-left i { 
+    color: #DC2626; 
+}
 
+/* --- BADGES (Label Kecil di Kanan Atas) --- */
 .badge {
+    padding: 4px 12px;
+    border-radius: 50px;
     font-size: 12px;
-    padding: 2px 8px;
-    border-radius: 6px;
+    font-weight: 600;
+}
+
+.badge-near {
+    background-color: #DCFCE7; 
+    color: #16A34A; 
+}
+
+.badge-expired {
+    background-color: #EF4444; 
+    color: white; 
+}
+
+/* --- BAGIAN ANGKA BESAR --- */
+.card-body h1 {
+    font-size: 36px;
+    font-weight: 800;
+    margin: 0 0 4px 0;
+    color: #111827; 
+}
+
+.card-body p {
+    font-size: 14px;
+    color: #6B7280; 
+    margin: 0 0 24px 0;
+}
+
+/* --- TOMBOL --- */
+.btn-action {
+    width: auto;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    transition: 0.2s;
+}
+
+.btn-green {
+    background-color: #22C55E;
     color: white;
-    margin-left: 10px;
 }
-.badge-green { 
- background-color: #28a745;
-}
+.btn-green:hover { background-color: #16A34A; }
 
-.badge-red { 
- background-color: #dc3545;
+.btn-red {
+    background-color: #EF4444;
+    color: white;
 }
+.btn-red:hover { background-color: #DC2626; }
 
-.btn-detail { 
- background-color: #28a745;
- color: white;
-}
-.btn-buang {
- background-color: #dc3545; 
- color: white;
+/* --- RESPONSIF (Agar rapi di HP) --- */
+@media (max-width: 768px) {
+    .alert-cards-container {
+        flex-direction: column; 
+    }
 }
 
 
 
 .inventory-table-card {
-    background-color: #9c969625;
+    background-color: #ffffff;
     border-radius: 12px;
     padding: 25px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .card-header {
@@ -236,30 +292,254 @@ h1 {
     background-color: #f5f5f5af; 
 }
 
+/* --- CONTAINER UTAMA --- */
+.shopping-list-section {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    margin-top: 60px;
+    margin-bottom: 60px;
+    font-family: sans-serif;
+}
 
-.status-badge {
-    padding: 3px 10px;
-    border-radius: 15px; 
-    font-size: 12px;
+/* --- HEADER BAGIAN ATAS --- */
+.shopping-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap; 
+    gap: 20px;
+}
+
+.header-text h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+    color: #222;
+}
+
+.header-text p {
+    margin: 0;
+    font-size: 14px;
+    color: #777;
+}
+
+/* Tombol-tombol di Header */
+.header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-outline-small {
+    background: transparent;
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.btn-outline-small:hover {
+    border-color: #111827;
+    color: #6cbd45;
+    background-color: #f9fff9;
+}
+
+.btn-green-small {
+    background-color: #28a745;
     color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-green-small:hover {
+    background-color: #28a745;
+}
+
+/* --- TABEL MODERN --- */
+.table-responsive {
+    overflow-x: auto; 
+}
+
+.modern-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Judul Kolom (TH) */
+.modern-table th {
+    text-align: left;
+    font-size: 11px;
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    color: #888;
+    padding: 15px 10px;
+    border-bottom: 2px solid #f4f4f4;
     font-weight: 600;
 }
-.status-expired { 
- background-color: #dc3545; 
-} 
-.status-good { 
- background-color: #28a745; 
-} 
 
-
-.table-actions i {
-    color: #555;
-    font-size: 16px;
-    margin-right: 10px;
-    cursor: pointer;
+/* Isi Tabel (TD) */
+.modern-table td {
+    padding: 18px 10px;
+    vertical-align: middle;
+    border-bottom: 1px solid #f9f9f9; 
+    font-size: 14px;
+    color: #444;
 }
-.table-actions i:hover {
-    color: #f07c00; 
+
+/* Efek Hover Baris */
+.modern-table tbody tr:hover {
+    background-color: #fafafa; 
+}
+
+/* Teks Nama Bahan Tebal */
+.fw-bold {
+    font-weight: 600;
+    color: #222 !important;
+}
+
+/* --- BADGES (Status Kapsul) --- */
+.badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    min-width: 80px;
+    text-align: center;
+}
+
+/* Warna Status Habis (Merah) */
+.badge-red {
+    background-color: #ffebee;
+    color: #e53935;
+}
+
+/* Warna Status Kurang (Kuning/Orange) */
+.badge-yellow {
+    background-color: #fff8e1;
+    color: #fbc02d;
+}
+
+/* --- TOMBOL AKSI (Edit & Hapus) --- */
+.btn-icon {
+    background: none;
+    border: none;
+    color: #777;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px;
+    transition: color 0.3s;
+    margin-right: 5px;
+}
+
+.btn-icon:hover {
+    color: #6cbd45; 
+}
+
+.btn-icon.delete:hover {
+    color: #e53935; 
+}
+
+
+.recommendation-section {
+    margin-top: 50px; 
+    margin-bottom: 50px;
+}
+
+.recommendation-section h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 25px;
+}
+
+
+.rec-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
+}
+
+
+.rec-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f0f0f0; 
+}
+
+
+.rec-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+.rec-card img {
+    width: 100%;
+    height: 180px; 
+    object-fit: cover; 
+}
+
+
+.rec-content {
+    padding: 20px;
+}
+
+.rec-content h4 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #222;
+}
+
+.rec-time {
+    font-size: 13px;
+    color: #666;
+    margin: 0 0 20px 0; 
+}
+
+
+.btn-rec-outline {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #ffffff; 
+    border: 1px solid #e0e0e0;
+    border-radius: 8px; 
+    color: #333;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-rec-outline:hover {
+    background-color: #f9f9f9; 
+    border-color: #ccc;
+}
+
+
+@media (max-width: 768px) {
+    .rec-grid {
+        grid-template-columns: 1fr; 
+    }
 }
 
 @media (max-width: 968px) {
@@ -276,7 +556,7 @@ h1 {
             }
         }
 
-        /* Responsive design untuk mobile */
+        
         @media (max-width: 640px) {
             .recipes-grid {
                 grid-template-columns: 1fr;

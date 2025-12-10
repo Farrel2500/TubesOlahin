@@ -23,7 +23,9 @@
         </nav>
         <div class="navbar-extra">
             <button class="btn btn-cari">Cari Resep</button>
-            <div class="profile-icon"></div>
+            <div class="profile-icon">
+                <img src="https://img.freepik.com/premium-photo/3d-image-young-beautiful-woman-teacher_853558-54667.jpg" class="avatar-profile" alt="User">
+            </div>
         </div>
     </header>
 
@@ -32,23 +34,46 @@
         <h1>Kelola Bahan Makanan</h1>
 
         <section class="alert-cards-container">
-            <div class="alert-card alert-near-expiry">
-                <i class="fa-solid fa-bell"></i>
-                <div class="alert-text">
-                    <h3>Akan Kadaluarsa <span class="badge badge-green">Near Expiry</span></h3>
-                    <p>0 bahan, Lihat 0 item</p>
-                </div>
-                <button class="btn btn-detail">Lihat Semua</button>
+    
+    <div class="card-expiry card-white">
+        <div class="card-header">
+            <div class="header-left">
+                <i class="fa-regular fa-bell"></i>
+                <h3>Akan Kadaluarsa</h3>
             </div>
-            <div class="alert-card alert-expired">
-                <i class="fa-solid fa-bell"></i>
-                <div class="alert-text">
-                    <h3>Kadaluarsa <span class="badge badge-red">Expired</span></h3>
-                    <p>10 bahan, Lihat 10 item</p>
-                </div>
-                <button class="btn btn-buang">Buang Semua</button>
+            <span class="badge badge-near">Near Expiry</span>
+        </div>
+        
+        <div class="card-body">
+            <h1>8 bahan</h1>
+            <p>Lihat 8 item</p>
+        </div>
+        
+        <div class="card-footer">
+            <button class="btn-action btn-green">Lihat Semua</button>
+        </div>
+    </div>
+
+    <div class="card-expiry card-red">
+        <div class="card-header">
+            <div class="header-left">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <h3>Kadaluarsa</h3>
             </div>
-        </section>
+            <span class="badge badge-expired">Expired</span>
+        </div>
+        
+        <div class="card-body">
+            <h1>2 bahan</h1>
+            <p>Lihat 2 item</p>
+        </div>
+        
+        <div class="card-footer">
+            <button class="btn-action btn-red">Buang Semua</button>
+        </div>
+    </div>
+
+</section>
 
         <section class="inventory-table-card">
             
@@ -207,6 +232,113 @@
                     </tr>
                 </tbody>
             </table>
+        </section>
+            <div class="shopping-list-section">
+    
+                 <div class="shopping-header">
+                 <div class="header-text">
+                    <h3>Daftar Belanja</h3>
+                     <p>Lihat bahan yang perlu diisi ulang untuk dapur Anda.</p>
+                 </div>
+                <div class="header-actions">
+                 <button class="btn-outline-small"><i class="fa fa-print"></i> Cetak</button>
+                 <button class="btn-outline-small"><i class="fa fa-download"></i> Unduh CSV</button>
+                 <button class="btn-green-small">+ Buat Daftar Belanja</button>
+                </div>
+            </div>
 
-        </section> </main> </body>
+            <div class="table-responsive">
+              <table class="modern-table">
+              <thead>
+                <tr>
+                    <th width="25%">NAMA BAHAN</th>
+                    <th width="15%">STATUS</th>
+                    <th width="20%">STOK SAAT INI</th>
+                    <th width="25%">KUANTITAS DIBUTUHKAN</th>
+                    <th width="15%">TINDAKAN</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td class="fw-bold">Telur Ayam</td>
+                    <td><span class="badge badge-red">Habis</span></td>
+                    <td>0 Lusin</td>
+                    <td>1 Lusin</td>
+                    <td>
+                        <button class="btn-icon"><i class="fa fa-edit"></i></button>
+                        <button class="btn-icon delete"><i class="fa fa-trash"></i></button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="fw-bold">Susu UHT</td>
+                    <td><span class="badge badge-red">Habis</span></td>
+                    <td>0 Liter</td>
+                    <td>2 Liter</td>
+                    <td>
+                        <button class="btn-icon"><i class="fa fa-edit"></i></button>
+                        <button class="btn-icon delete"><i class="fa fa-trash"></i></button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="fw-bold">Beras</td>
+                    <td><span class="badge badge-yellow">Kurang</span></td>
+                    <td>1 Kg</td>
+                    <td>5 Kg</td>
+                    <td>
+                        <button class="btn-icon"><i class="fa fa-edit"></i></button>
+                        <button class="btn-icon delete"><i class="fa fa-trash"></i></button>
+                    </td>
+                </tr>
+
+                 <tr>
+                    <td class="fw-bold">Garam</td>
+                    <td><span class="badge badge-yellow">Kurang</span></td>
+                    <td>Setengah Botol</td>
+                    <td>1 Botol</td>
+                    <td>
+                        <button class="btn-icon"><i class="fa fa-edit"></i></button>
+                        <button class="btn-icon delete"><i class="fa fa-trash"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+
+                <div class="recommendation-section">
+                     <h3>Resep yang Direkomendasikan</h3>
+    
+                  <div class="rec-grid">
+                        <div class="rec-card">
+                             <img src="https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2023/07/13073811/Praktis-dengan-Bahan-Sederhana-Ini-Resep-Nasi-Goreng-Special-1.jpg.webp" alt="Nasi Goreng">
+                         <div class="rec-content">
+                            <h4>Nasi Goreng Spesial</h4>
+                            <p class="rec-time">30 menit</p>
+                            <button class="btn-rec-outline">Lihat Resep</button>
+                         </div>
+                        </div>
+
+                        <div class="rec-card">
+                             <img src="https://www.jamurpedia.com/wp-content/uploads/2025/04/Soto-Ayam-Kuah-Bening-788x525.jpg" alt="Soto Ayam">
+                         <div class="rec-content">
+                            <h4>Soto Ayam Kuah Bening</h4>
+                            <p class="rec-time">45 menit</p>
+                            <button class="btn-rec-outline">Lihat Resep</button>
+                         </div>
+                        </div>
+
+                        <div class="rec-card">
+                            <img src="https://thegorbalsla.com/wp-content/uploads/2019/06/Resep-Tumis-Kangkung-Udang.png" alt="Tumis Kangkung">
+                         <div class="rec-content">
+                            <h4>Tumis Kangkung Udang</h4>
+                            <p class="rec-time">20 menit</p>
+                            <button class="btn-rec-outline">Lihat Resep</button>
+                         </div>
+                        </div>
+                    </div>
+                </div>
+        </main> 
+    </body>
 </html>
