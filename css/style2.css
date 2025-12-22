@@ -1,0 +1,572 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  
+}
+
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 20px auto;
+}
+
+.navbar {
+  background-color: #fff09dff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 40px;
+  font-size: 12px;
+  height: 30px;
+}
+
+
+.navbar-logo img {
+  width:80px;    
+  height: auto;    
+}
+
+.navbar-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.navbar-nav a.active {
+  color: #f07c00;
+}
+
+.navbar-extra {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar-profile {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.btn {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.btn-cari {
+  background-color: #4caf50;
+  color: white;
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-family: 'poppins'; 
+}
+
+/* --- CONTAINER (Agar kartu sejajar kiri-kanan) --- */
+.alert-cards-container {
+    display: flex;
+    gap: 24px; 
+    margin-bottom: 32px;
+    width: 100%;
+}
+
+/* --- STYLE DASAR KARTU --- */
+.card-expiry {
+    flex: 1; 
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: sans-serif; 
+}
+
+/* --- WARNA BACKGROUND KARTU --- */
+/* Kartu Kiri (Putih) */
+.card-white {
+    background-color: #c6f3ba;
+    border: 1px solid #E5E7EB; 
+}
+
+/* Kartu Kanan (Merah Muda) */
+.card-red {
+    background-color: #FFE4E6; 
+    border: 1px solid #FECDD3;
+}
+
+/* --- BAGIAN HEADER (Icon & Judul) --- */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    margin-bottom: 20px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-left i {
+    font-size: 18px;
+}
+
+.header-left h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* Warna Icon & Judul */
+.card-white .header-left h3, 
+.card-white .header-left i { 
+    color: #F59E0B; 
+}
+
+.card-red .header-left h3,
+.card-red .header-left i { 
+    color: #DC2626; 
+}
+
+/* --- BADGES (Label Kecil di Kanan Atas) --- */
+.badge {
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge-near {
+    background-color: #DCFCE7; 
+    color: #16A34A; 
+}
+
+.badge-expired {
+    background-color: #EF4444; 
+    color: white; 
+}
+
+/* --- BAGIAN ANGKA BESAR --- */
+.card-body h1 {
+    font-size: 36px;
+    font-weight: 800;
+    margin: 0 0 4px 0;
+    color: #111827; 
+}
+
+.card-body p {
+    font-size: 14px;
+    color: #6B7280; 
+    margin: 0 0 24px 0;
+}
+
+/* --- TOMBOL --- */
+.btn-action {
+    width: auto;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    transition: 0.2s;
+}
+
+.btn-green {
+    background-color: #22C55E;
+    color: white;
+}
+.btn-green:hover { background-color: #16A34A; }
+
+.btn-red {
+    background-color: #EF4444;
+    color: white;
+}
+.btn-red:hover { background-color: #DC2626; }
+
+/* --- RESPONSIF (Agar rapi di HP) --- */
+@media (max-width: 768px) {
+    .alert-cards-container {
+        flex-direction: column; 
+    }
+}
+
+
+
+.inventory-table-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-bottom: 24px;
+}
+.card-title h4 {
+ font-size: 25px;
+ margin: 0; 
+}
+.card-title p { 
+ font-size: 13px;
+ color: #777;
+ margin: 0; 
+}
+
+.btn-tambah-bahan {
+    background-color: #28a745; 
+    color: white;
+    font-size: 14px;
+}
+
+.card-filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px; 
+    margin-bottom: 20px;
+}
+
+.card-filters input[type="text"],
+.card-filters select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+
+.card-filters input[type="text"] {
+    flex: 1; 
+}
+
+
+.inventory-table {
+    width: 100%; 
+    border-collapse: collapse; 
+}
+
+
+.inventory-table th,
+.inventory-table td {
+    padding: 12px 15px; 
+    font-size: 14px;
+    text-align: left; 
+    border-bottom: 2px solid #eee; 
+}
+
+.inventory-table th { 
+    font-size: 14px;
+    color: #131212;
+    font-weight: 600;
+    background-color: #eee
+}
+
+.inventory-table tbody tr:hover {
+    background-color: #f5f5f5af; 
+}
+
+/* --- CONTAINER UTAMA --- */
+.shopping-list-section {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    margin-top: 60px;
+    margin-bottom: 60px;
+    font-family: sans-serif;
+}
+
+/* --- HEADER BAGIAN ATAS --- */
+.shopping-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap; 
+    gap: 20px;
+}
+
+.header-text h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+    color: #222;
+}
+
+.header-text p {
+    margin: 0;
+    font-size: 14px;
+    color: #777;
+}
+
+/* Tombol-tombol di Header */
+.header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-outline-small {
+    background: transparent;
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.btn-outline-small:hover {
+    border-color: #111827;
+    color: #6cbd45;
+    background-color: #f9fff9;
+}
+
+.btn-green-small {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-green-small:hover {
+    background-color: #28a745;
+}
+
+/* --- TABEL MODERN --- */
+.table-responsive {
+    overflow-x: auto; 
+}
+
+.modern-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Judul Kolom (TH) */
+.modern-table th {
+    text-align: left;
+    font-size: 11px;
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    color: #888;
+    padding: 15px 10px;
+    border-bottom: 2px solid #f4f4f4;
+    font-weight: 600;
+}
+
+/* Isi Tabel (TD) */
+.modern-table td {
+    padding: 18px 10px;
+    vertical-align: middle;
+    border-bottom: 1px solid #f9f9f9; 
+    font-size: 14px;
+    color: #444;
+}
+
+/* Efek Hover Baris */
+.modern-table tbody tr:hover {
+    background-color: #fafafa; 
+}
+
+/* Teks Nama Bahan Tebal */
+.fw-bold {
+    font-weight: 600;
+    color: #222 !important;
+}
+
+/* --- BADGES (Status Kapsul) --- */
+.badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    min-width: 80px;
+    text-align: center;
+}
+
+/* Warna Status Habis (Merah) */
+.badge-red {
+    background-color: #ffebee;
+    color: #e53935;
+}
+
+/* Warna Status Kurang (Kuning/Orange) */
+.badge-yellow {
+    background-color: #fff8e1;
+    color: #fbc02d;
+}
+
+/* --- TOMBOL AKSI (Edit & Hapus) --- */
+.btn-icon {
+    background: none;
+    border: none;
+    color: #777;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px;
+    transition: color 0.3s;
+    margin-right: 5px;
+}
+
+.btn-icon:hover {
+    color: #6cbd45; 
+}
+
+.btn-icon.delete:hover {
+    color: #e53935; 
+}
+
+
+.recommendation-section {
+    margin-top: 50px; 
+    margin-bottom: 50px;
+}
+
+.recommendation-section h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 25px;
+}
+
+
+.rec-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
+}
+
+
+.rec-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f0f0f0; 
+}
+
+
+.rec-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+.rec-card img {
+    width: 100%;
+    height: 180px; 
+    object-fit: cover; 
+}
+
+
+.rec-content {
+    padding: 20px;
+}
+
+.rec-content h4 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #222;
+}
+
+.rec-time {
+    font-size: 13px;
+    color: #666;
+    margin: 0 0 20px 0; 
+}
+
+
+.btn-rec-outline {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #ffffff; 
+    border: 1px solid #e0e0e0;
+    border-radius: 8px; 
+    color: #333;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-rec-outline:hover {
+    background-color: #f9f9f9; 
+    border-color: #ccc;
+}
+
+
+@media (max-width: 768px) {
+    .rec-grid {
+        grid-template-columns: 1fr; 
+    }
+}
+
+@media (max-width: 968px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .recipes-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        
+        @media (max-width: 640px) {
+            .recipes-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+        }

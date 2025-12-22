@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelola Bahan - Olah.in</title>
+    <link rel="stylesheet" href="/css/style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="navbar-logo">
+             <img src="../img/logo olahin.png" alt="logo olahin" >
+        </div>
+        <nav class="navbar-nav">
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="resep.html">Resep Cerdas</a></li>
+                <li><a href="#">Anggaran</a></li>
+                <li><a href="#" class="active">Kelola Bahan</a></li>
+            </ul>
+        </nav>
+        <div class="navbar-extra">
+            <button class="btn btn-cari">Cari Resep</button>
+            <div class="profile-icon">
+                <img src="https://img.freepik.com/premium-photo/3d-image-young-beautiful-woman-teacher_853558-54667.jpg" class="avatar-profile" alt="User">
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <h1>Kelola Bahan Makanan</h1>
+
+        <section class="alert-cards-container">
+    
+    <div class="card-expiry card-white">
+        <div class="card-header">
+            <div class="header-left">
+                <i class="fa-regular fa-bell"></i>
+                <h3>Akan Kadaluarsa</h3>
+            </div>
+            <span class="badge badge-near">Near Expiry</span>
+        </div>
+        
+        <div class="card-body">
+            <h1>8 bahan</h1>
+            <p>Lihat 8 item</p>
+        </div>
+        
+        <div class="card-footer">
+            <button class="btn-action btn-green">Lihat Semua</button>
+        </div>
+    </div>
+
+    <div class="card-expiry card-red">
+        <div class="card-header">
+            <div class="header-left">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <h3>Kadaluarsa</h3>
+            </div>
+            <span class="badge badge-expired">Expired</span>
+        </div>
+        
+        <div class="card-body">
+            <h1>2 bahan</h1>
+            <p>Lihat 2 item</p>
+        </div>
+        
+        <div class="card-footer">
+            <button class="btn-action btn-red">Buang Semua</button>
+        </div>
+    </div>
+
+</section>
+
+        <section class="inventory-table-card">
+            
+            <div class="card-header">
+                <div class="card-title">
+                    <h4>Semua Bahan</h4>
+                    <p>Kelola inventaris bahan dapur Anda.</p>
+                </div>
+                <button class="btn btn-tambah-bahan">+ Tambah Bahan Baru</button>
+            </div>
+
+            <div class="card-filters">
+                <input type="text" placeholder="Cari bahan...">
+                <select id="kategori">
+                    <label for="kategori">Kategori</label>
+                    <option value="semua">Semua Kategori</option>
+                    <option value="Produk Susu">Produk Susu</option>
+                    <option value="Daging">Daging</option>
+                    <option value="Bumbu">Bumbu</option>
+                    <option value="Sayuran">Sayuran</option>
+                    <select id="kategori" class="dropdown-box">
+                </select>
+                
+                </select>
+                   <select>
+                       <option value="">Semua Status</option>
+                       <option value="">Expired</option>
+                       <option value="">Good</option>
+                   </select> 
+            </div>
+
+            <table class="inventory-table">
+                <thead>
+                    <tr>
+                        <th>Nama Bahan</th>
+                        <th>Kategori</th>
+                        <th>Jumlah</th>
+                        <th>Tanggal Beli</th>
+                        <th>Tanggal Kadaluarsa</th>
+                        <th>Status</th>
+                        <th>Tindakan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Telur</td>
+                        <td>Produk Susu</td>
+                        <td>1 Lusin</td>
+                        <td>2024-03-10</td>
+                        <td>2024-03-25</td>
+                        <td><span class="status-badge status-expired">Expired</span></td>
+                        <td class="table-actions">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Susu</td>
+                        <td>Produk Susu</td>
+                        <td>1 Liter</td>
+                        <td>2024-03-15</td>
+                        <td>2024-03-20</td>
+                        <td><span class="status-badge status-expired">Expired</span></td>
+                        <td class="table-actions">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Dada Ayam</td>
+                        <td>Daging</td>
+                        <td>500g</td>
+                        <td>2024-03-18</td>
+                        <td>2024-03-28</td>
+                        <td><span class="status-badge status-good">Good</span></td> <td class="table-actions">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tomat</td>
+                        <td>Sayuran</td>
+                        <td>1 Kg</td>
+                        <td>2024-03-19</td>
+                        <td>2024-03-26</td>
+                        <td><span class="status-badge status-good">Good</span></td> <td class="table-actions">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pasta</td>
+                        <td>Pantry</td>
+                        <td>500g</td>
+                        <td>2024-03-01</td>
+                        <td>2024-03-01</td>
+                        <td><span class="status-badge status-good">Good</span></td> <td class="table-actions">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Bawang Putih</td>
+                        <td>Bumbu</td>
+                        <td>1 Kepala</td>
+                        <td>2024-03-05</td>
+                        <td>2024-03-10</td>
+                        <td><span class="status-badge status-good">Good</span></td> <td class="table-actions">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Yogurt</td>
+                        <td>Produk Susu</td>
+                        <td>4 Gelas</td>
+                        <td>2024-03-16</td>
+                        <td>2024-03-21</td>
+                        <td><span class="status-badge status-good">Good</span></td> <td class="table-actions">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Roti</td>
+                        <td>Roti</td>
+                        <td>1 Pack</td>
+                        <td>2024-03-20</td>
+                        <td>2024-03-24</td>
+                        <td><span class="status-badge status-good">Good</span></td> <td class="table-actions">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Keju Cheddar</td>
+                        <td>Produk Susu</td>
+                        <td>200 Gram</td>
+                        <td>2024-03-12</td>
+                        <td>2024-03-22</td>
+                        <td><span class="status-badge status-good">Good</span></td> <td class="table-actions">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Daging Sapi Giling</td>
+                        <td>Daging</td>
+                        <td>400 Gram</td>
+                        <td>2024-03-21</td>
+                        <td>2024-03-27</td>
+                        <td><span class="status-badge status-good">Good</span></td> <td class="table-actions">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+            <div class="shopping-list-section">
+    
+                 <div class="shopping-header">
+                 <div class="header-text">
+                    <h3>Daftar Belanja</h3>
+                     <p>Lihat bahan yang perlu diisi ulang untuk dapur Anda.</p>
+                 </div>
+                <div class="header-actions">
+                 <button class="btn-outline-small"><i class="fa fa-print"></i> Cetak</button>
+                 <button class="btn-outline-small"><i class="fa fa-download"></i> Unduh CSV</button>
+                 <button class="btn-green-small">+ Buat Daftar Belanja</button>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+              <table class="modern-table">
+              <thead>
+                <tr>
+                    <th width="25%">NAMA BAHAN</th>
+                    <th width="15%">STATUS</th>
+                    <th width="20%">STOK SAAT INI</th>
+                    <th width="25%">KUANTITAS DIBUTUHKAN</th>
+                    <th width="15%">TINDAKAN</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td class="fw-bold">Telur Ayam</td>
+                    <td><span class="badge badge-red">Habis</span></td>
+                    <td>0 Lusin</td>
+                    <td>1 Lusin</td>
+                    <td>
+                        <button class="btn-icon"><i class="fa fa-edit"></i></button>
+                        <button class="btn-icon delete"><i class="fa fa-trash"></i></button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="fw-bold">Susu UHT</td>
+                    <td><span class="badge badge-red">Habis</span></td>
+                    <td>0 Liter</td>
+                    <td>2 Liter</td>
+                    <td>
+                        <button class="btn-icon"><i class="fa fa-edit"></i></button>
+                        <button class="btn-icon delete"><i class="fa fa-trash"></i></button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="fw-bold">Beras</td>
+                    <td><span class="badge badge-yellow">Kurang</span></td>
+                    <td>1 Kg</td>
+                    <td>5 Kg</td>
+                    <td>
+                        <button class="btn-icon"><i class="fa fa-edit"></i></button>
+                        <button class="btn-icon delete"><i class="fa fa-trash"></i></button>
+                    </td>
+                </tr>
+
+                 <tr>
+                    <td class="fw-bold">Garam</td>
+                    <td><span class="badge badge-yellow">Kurang</span></td>
+                    <td>Setengah Botol</td>
+                    <td>1 Botol</td>
+                    <td>
+                        <button class="btn-icon"><i class="fa fa-edit"></i></button>
+                        <button class="btn-icon delete"><i class="fa fa-trash"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+
+                <div class="recommendation-section">
+                     <h3>Resep yang Direkomendasikan</h3>
+    
+                  <div class="rec-grid">
+                        <div class="rec-card">
+                             <img src="https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2023/07/13073811/Praktis-dengan-Bahan-Sederhana-Ini-Resep-Nasi-Goreng-Special-1.jpg.webp" alt="Nasi Goreng">
+                         <div class="rec-content">
+                            <h4>Nasi Goreng Spesial</h4>
+                            <p class="rec-time">30 menit</p>
+                            <button class="btn-rec-outline">Lihat Resep</button>
+                         </div>
+                        </div>
+
+                        <div class="rec-card">
+                             <img src="https://www.jamurpedia.com/wp-content/uploads/2025/04/Soto-Ayam-Kuah-Bening-788x525.jpg" alt="Soto Ayam">
+                         <div class="rec-content">
+                            <h4>Soto Ayam Kuah Bening</h4>
+                            <p class="rec-time">45 menit</p>
+                            <button class="btn-rec-outline">Lihat Resep</button>
+                         </div>
+                        </div>
+
+                        <div class="rec-card">
+                            <img src="https://thegorbalsla.com/wp-content/uploads/2019/06/Resep-Tumis-Kangkung-Udang.png" alt="Tumis Kangkung">
+                         <div class="rec-content">
+                            <h4>Tumis Kangkung Udang</h4>
+                            <p class="rec-time">20 menit</p>
+                            <button class="btn-rec-outline">Lihat Resep</button>
+                         </div>
+                        </div>
+                    </div>
+                </div>
+        </main> 
+    </body>
+</html>
