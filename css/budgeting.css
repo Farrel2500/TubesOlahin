@@ -59,6 +59,21 @@ body {
     gap: 1.5rem;
 }
 
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-box {
+    background: #fff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .btn-search {
     background-color: #66BB6A; /* Hijau tombol */
     color: white;
