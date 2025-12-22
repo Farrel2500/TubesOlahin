@@ -1,0 +1,443 @@
+/* --- RESET & GLOBAL VARIABLES --- */
+:root {
+    --primary-yellow: #FCE883; /* Warna Navbar */
+    --accent-orange: #F58634; /* Warna Tombol/Aktif */
+    --text-dark: #333333;
+    --text-light: #666666;
+    --bg-light: #FFFFFF;
+    --border-radius: 12px;
+    --card-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #FAFAFA;
+    color: var(--text-dark);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+    background-color: var(--primary-yellow);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #D97706; /* Contoh warna hijau/biru pada logo */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo span.logo-icon {
+    font-size: 1.8rem;
+}
+
+.logo span {
+    color: #F58634;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.nav-links a.active {
+    color: var(--accent-orange);
+    font-weight: 700;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-box {
+    background: #fff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.profile-pic img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.timer {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    background: rgba(0,0,0,0.5);
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 20px;
+}
+
+.btn-primary {
+    background-color: var(--accent-orange);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #e0701e;
+}
+
+/* --- MAIN LAYOUT (GRID & SIDEBAR) --- */
+.main-layout {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* 75% Konten, 25% Sidebar */
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* FILTERS */
+.filters {
+    margin-bottom: 25px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    border: 1px solid #ddd;
+    background: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+.filter-btn.active {
+    background-color: var(--accent-orange);
+    color: white;
+    border-color: var(--accent-orange);
+}
+
+/* CARD GRID */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.2s;
+    border: 1px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card.highlight-border {
+    border: 2px solid #9B51E0; /* Border ungu untuk highlight */
+}
+
+.card-img {
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-body h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+    min-height: 48px; /* Agar tinggi kartu seragam */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.badge.medium { background-color: #E0E0E0; color: #555; }
+.badge.hard { background-color: #FFCDD2; color: #D32F2F; }
+.badge.easy { background-color: #C8E6C9; color: #2E7D32; }
+
+.btn-outline {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #FFD8A8;
+    background: transparent;
+    color: var(--accent-orange);
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-outline:hover {
+    background: #FFF4E6;
+}
+
+/* --- SIDEBAR --- */
+.widget {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 25px;
+}
+
+.widget h3 {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+/* LEADERBOARD */
+.leaderboard ul {
+    list-style: none;
+}
+
+.leaderboard li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-info img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.rank {
+    font-weight: bold;
+    color: var(--text-light);
+    width: 20px;
+}
+
+.points {
+    color: var(--text-light);
+    font-size: 0.85rem;
+}
+
+/* MY PROGRESS WIDGET */
+.my-progress {
+    padding: 0;
+    overflow: hidden;
+}
+
+.progress-img {
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+}
+
+.progress-content {
+    padding: 20px;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 8px;
+    background: #eee;
+    border-radius: 4px;
+    margin: 10px 0 5px 0;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: var(--accent-orange);
+}
+
+.full-width {
+    width: 100%;
+    margin-top: 15px;
+}
+
+footer {
+            background-color: #FFF09DFF;
+            padding: 40px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .footer-logo {
+            height: 40px;
+            width: auto;
+        }
+        
+        .footer-tagline {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .footer-section h4 {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-left: 30px;
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            text-decoration: none;
+            color: #666;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #FF6B35;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #999;
+            font-size: 14px;
+        }
+
+.points {
+    position: sticky;
+}
+
+.btn-points {
+    position: sticky;
+    float: right;
+    right: 0;
+    background-color: white;
+    color: black;
+    box-shadow: var(--card-shadow);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .main-layout {
+        grid-template-columns: 1fr; /* Stack sidebar ke bawah di mobile */
+    }
+    
+    .nav-links, .nav-right {
+        display: none; /* Sederhana untuk demo, aslinya perlu hamburger menu */
+    }
+    
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+}

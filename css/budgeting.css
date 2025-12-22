@@ -1,200 +1,331 @@
-/* Variabel Warna Khusus Aplikasi */
-:root {
-    --color-primary-green: #4CAF50;
-    --color-soft-yellow: #FFFAA0; /* Warna latar belakang header nav */
-    --color-background-grey: #f0f0f5; /* Latar belakang utama aplikasi */
-    --color-card-white: #fff;
-    --color-text-dark: #333;
-    --color-text-light: #666;
-    --color-accent-orange: #FF7043; /* Warna tombol Quick Action 1 */
-    --color-accent-grey: #e8e8e8; /* Warna tombol Quick Action 2 */
-}
-
+/* Reset Dasar */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-color: var(--color-background-grey);
+    background-color: #F8F9FB; /* Warna background abu-abu sangat muda */
+    color: #333;
 }
 
-.app-interface-container {
-    width: 100%;;
-    margin: 0 auto;
-    background-color: var(--color-card-white); /* Background di dalam layar laptop */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+/* --- Navbar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFF09DFF; /* Kuning terang sesuai gambar */
+    padding: 1rem 3rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-/* --- App Header (Navigation Bar Aplikasi) --- */
-.app-header {
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #E63946; /* Merah oranye */
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background-color: rgb(255, 255, 255) ; /* Latar belakang kuning muda */
-    padding: 15px 30px;
-    border-bottom: 1px solid #ddd;
-    box-shadow: #333 0px 4px 6px -1px;
+    gap: 8px;
 }
 
-.header-logo {
-    font-size: 1.2em;
-    font-weight: 900;
-    margin-right: 30px;
+.logo .highlight {
+    color: #2A9D8F; /* Hijau teal */
 }
 
-.header-logo .in-green {
-    color: var(--color-primary-green);
-}
-
-.app-nav-links {
-    flex-grow: 1;
+.nav-links {
+    list-style: none;
     display: flex;
-    text-align: center;
-    justify-content: center;
-    gap: 20px;
+    gap: 2rem;
 }
 
-.app-nav-links a {
-    color: var(--color-text-light);
-    font-weight: 600;
-    padding: 5px 10px;
-    border-radius: 5px;
+.nav-links a {
     text-decoration: none;
-    transition: color 0.2s, background-color 0.2s;
+    color: #555;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s;
 }
 
-.app-nav-links a:hover {
-    color: #4CAF50;
-}
-
-.app-nav-links .active-link {
-    background-color: var(--color-white);
-    color: #4CAF50;
+.nav-links a.active {
+    color: #D97706; /* Oranye tua untuk menu aktif */
     font-weight: 700;
 }
 
-/* Tombol dan Avatar di Kanan Header */
-.header-actions {
+.nav-actions {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 1.5rem;
 }
 
-.btn-primary-green-small {
-    background-color: var(--color-primary-green);
-    color: var(--color-white);
-    padding: 8px 15px;
+.btn-search {
+    background-color: #66BB6A; /* Hijau tombol */
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
     border-radius: 20px;
-    font-size: 0.9em;
     font-weight: 600;
-    text-decoration: none;
+    cursor: pointer;
 }
 
-.user-profile .avatar {
-    width: 35px;
-    height: 35px;
+.profile-pic img {
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid var(--color-primary-green);
+    border: 2px solid white;
 }
 
-/* --- Main Content: Budgeting Page --- */
-.budgeting-page-content {
-    padding: 30px;
+/* --- Layout Container --- */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 20px;
 }
 
-.budgeting-page-content h1 {
-    font-size: 2.2em;
+.page-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    font-weight: 800;
+}
+
+/* --- Grid System --- */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dua kolom sama besar */
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* --- Cards Styling --- */
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    border: 1px solid #EEEEEE;
+}
+
+.card h2 {
+    font-size: 1.1rem;
     font-weight: 700;
-    color: var(--color-text-dark);
-    margin-bottom: 30px;
+    margin-bottom: 0.5rem;
 }
 
-.transactions-section,
-.quick-actions-section {
-    margin-bottom: 40px;
+/* --- Budget Card Specifics --- */
+.budget-card .subtitle {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 2rem;
 }
 
-.transactions-section h2,
-.quick-actions-section h2 {
-    font-size: 1.4em;
+.budget-details {
+    margin-top: 1rem;
+}
+
+.budget-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
     font-weight: 600;
-    color: var(--color-text-dark);
-    margin-bottom: 20px;
 }
 
-/* --- Recent Transactions Table --- */
-.transaction-table-wrapper {
-    background-color: var(--color-white);
-    border-radius: 8px;
-    padding: 10px 0;
-    border: 1px solid #000000;
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background-color: #F3F4F6;
+    border-radius: 10px;
+    margin: 10px 0;
+    overflow: hidden;
 }
 
-.transaction-table {
+.progress-bar {
+    height: 100%;
+    background-color: #F97316; /* Oranye progress bar */
+    border-radius: 10px;
+}
+
+.remaining {
+    margin-top: 0.5rem;
+    color: #333;
+}
+
+/* --- Chart Card Specifics --- */
+.card-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.date-filter {
+    font-size: 0.8rem;
+    color: #888;
+    background: #F9FAFB;
+    padding: 4px 8px;
+    border-radius: 6px;
+    border: 1px solid #eee;
+}
+
+.chart-container {
+    position: relative;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.line-chart {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.chart-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 0.75rem;
+    color: #999;
+}
+.footer {
+            background-color: #FFF09DFF;
+            padding: 40px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .footer-logo {
+            height: 40px;
+            width: auto;
+        }
+        
+        .footer-tagline {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .footer-section h4 {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-left: 30px;
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            text-decoration: none;
+            color: #666;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #FF6B35;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #999;
+            font-size: 14px;
+        }
+
+
+.transaction {
+    margin-top: 10px;
+}
+
+.btn-add-transaction, .btn-view-all {
+    background-color: #FFF09DFF; /* Hijau teal */
+    color: black;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+/* --- Transaction Table --- */
+.transaction-card h2 {
+    margin-bottom: 1.5rem;
+}
+
+table {
     width: 100%;
     border-collapse: collapse;
+}
+
+thead th {
     text-align: left;
-    font-size: 0.95em;
-}
-
-.transaction-table th,
-.transaction-table td {
-    padding: 12px 20px;
-}
-
-.transaction-table th {
-    font-weight: 700;
-    color: var(--color-text-light);
+    font-size: 0.8rem;
+    color: #888;
+    font-weight: 600;
+    padding-bottom: 1rem;
     border-bottom: 1px solid #eee;
 }
 
-.transaction-table tbody tr:not(:last-child) {
+tbody td {
+    padding: 1.2rem 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
     border-bottom: 1px solid #f9f9f9;
 }
 
-.transaction-table tbody td {
-    color: var(--color-text-dark);
+tbody tr:last-child td {
+    border-bottom: none;
 }
 
-.transaction-table tbody tr:hover {
-    background-color: #fcfcfc;
-}
 
-.amount-col {
-    text-align: right;
-    font-weight: 600;
-    color: var(--color-text-dark);
-}
 
-/* --- Quick Actions Buttons --- */
-.action-buttons {
-    display: flex;
-    gap: 15px;
-}
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
 
-.btn {
-    padding: 12px 25px;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    border: none;
-    transition: opacity 0.2s;
-}
-
-.btn-action-primary {
-    background-color: var(--color-accent-orange);
-    color: var(--color-white);
-}
-
-.btn-action-secondary {
-    background-color: var(--color-accent-grey);
-    color: var(--color-text-dark);
-}
-
-.btn:hover {
-    opacity: 0.9;
+    .dashboard-grid {
+        grid-template-columns: 1fr; /* Stack cards on mobile */
+    }
+    
+    .transaction-card {
+        overflow-x: auto; /* Scroll table on mobile */
+    }
+    
+    table {
+        min-width: 500px;
+    }
 }

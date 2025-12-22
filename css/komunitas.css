@@ -1,0 +1,374 @@
+/* --- CSS VARIABLES --- */
+:root {
+    --primary-yellow: #FFF09DFF; /* Warna nav */
+    --accent-yellow: #FFF09DFF; /* Warna highlight/footer */
+    --card-yellow: #FFF09DFF; /* Warna box tantangan */
+    --primary-green: #4ADE80; /* Warna tombol */
+    --text-dark: #1F2937;
+    --text-gray: #6B7280;
+    --bg-body: #F9FAFB;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-dark);
+}
+
+/* --- NAVBAR --- */
+header {
+    background-color: var(--primary-yellow);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #ff7519;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo span {
+    color: var(--primary-green);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+nav a.active {
+    color: #d97706;
+    font-weight: 700;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-bar-nav {
+    background: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+}
+
+.search-bar-nav input {
+    border: none;
+    outline: none;
+    font-size: 0.85rem;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ddd;
+    overflow: hidden;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- MAIN CONTAINER --- */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.page-title h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* --- SEARCH & FILTER SECTION --- */
+.filter-section {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.main-search {
+    flex: 2;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+.filter-btn {
+    padding: 0.8rem 1.5rem;
+    background: var(--white);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* --- GRID LAYOUT (Content vs Sidebar) --- */
+.layout-grid {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    gap: 2rem;
+}
+
+/* --- LEFT COLUMN: RECIPES --- */
+.section-header {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.card-img {
+    height: 150px;
+    background-color: #eee;
+    position: relative;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.recipe-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: var(--text-gray);
+    margin-bottom: 1rem;
+}
+
+.author-pic {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ccc;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: var(--text-gray);
+    border-top: 1px solid #eee;
+    padding-top: 0.8rem;
+}
+
+.stats span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* --- RIGHT COLUMN: SIDEBAR --- */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.widget-box {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.widget-yellow {
+    background-color: var(--card-yellow);
+}
+
+.widget-title {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.widget-desc {
+    font-size: 0.85rem;
+    color: var(--text-gray);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.btn-green {
+    background-color: var(--primary-green);
+    color: var(--white);
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    width: 100%;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Leaderboard Style */
+.leaderboard-list {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.leaderboard-item {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.rank {
+    font-weight: bold;
+    color: #d97706;
+    width: 20px;
+    margin-right: 10px;
+}
+
+.user-info {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.points {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.see-all {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--primary-green);
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+
+/* Points Widget */
+.points-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+.points-val {
+    font-weight: 700;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--accent-yellow);
+    padding: 3rem 2rem 1rem;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-col h4 {
+    margin-bottom: 1rem;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .layout-grid {
+        grid-template-columns: 1fr;
+    }
+    nav ul {
+        display: none;
+    }
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
