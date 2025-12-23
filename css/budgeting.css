@@ -72,16 +72,13 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    border: none;
 }
 
-.btn-search {
-    background-color: #66BB6A; /* Hijau tombol */
-    color: white;
+.search-box input {
     border: none;
-    padding: 0.6rem 1.2rem;
-    border-radius: 20px;
-    font-weight: 600;
-    cursor: pointer;
+    outline: none;
+    font-size: 0.9rem;
 }
 
 .profile-pic img {
@@ -277,7 +274,7 @@ body {
 }
 
 .btn-add-transaction, .btn-view-all {
-    background-color: #FFF09DFF; /* Hijau teal */
+    background-color: rgb(9, 255, 0); /* Hijau teal */
     color: black;
     border: none;
     padding: 0.6rem 1.2rem;
